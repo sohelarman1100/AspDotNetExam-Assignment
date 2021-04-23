@@ -46,7 +46,10 @@ namespace ex1Task4
                 stud2[i].Age = age;
             }
 
-            var res = stud1.Concat(stud2).OrderBy(x => x.Name).ThenBy(x => x.Age).Select(x => x.Name).ToArray();
+            //var res = stud1.Concat(stud2).OrderBy(x => x.Name).ThenBy(x => x.Age).Select(x => x.Name).ToArray();
+            var res = from x in stud1.Concat(stud2)
+                      orderby x.Name ascending, x.Age ascending
+                      select x.Name;
             foreach(var x in res)
             {
                 Console.WriteLine(x);

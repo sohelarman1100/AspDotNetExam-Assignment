@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\C# code\\ex1Task4\\ex1Task4\\ex1Task4.csproj": {}
+    "G:\\AspDotNetExam-Assignment\\ex1Task4\\ex1Task4\\ex1Task4.csproj": {}
   },
   "projects": {
-    "G:\\C# code\\ex1Task4\\ex1Task4\\ex1Task4.csproj": {
+    "G:\\AspDotNetExam-Assignment\\ex1Task4\\ex1Task4\\ex1Task4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\C# code\\ex1Task4\\ex1Task4\\ex1Task4.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\ex1Task4\\ex1Task4\\ex1Task4.csproj",
         "projectName": "ex1Task4",
-        "projectPath": "G:\\C# code\\ex1Task4\\ex1Task4\\ex1Task4.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\ex1Task4\\ex1Task4\\ex1Task4.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\C# code\\ex1Task4\\ex1Task4\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\ex1Task4\\ex1Task4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
