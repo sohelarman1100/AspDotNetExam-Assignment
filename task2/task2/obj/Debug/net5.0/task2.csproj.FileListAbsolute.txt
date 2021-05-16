@@ -1,0 +1,16 @@
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.exe
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.deps.json
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.runtimeconfig.json
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.runtimeconfig.dev.json
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.dll
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\ref\task2.dll
+G:\AspDotNetExam-Assignment\task2\task2\bin\Debug\net5.0\task2.pdb
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.csprojAssemblyReference.cache
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.GeneratedMSBuildEditorConfig.editorconfig
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.AssemblyInfoInputs.cache
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.AssemblyInfo.cs
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.csproj.CoreCompileInputs.cache
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.dll
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\ref\task2.dll
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.pdb
+G:\AspDotNetExam-Assignment\task2\task2\obj\Debug\net5.0\task2.genruntimeconfig.cache
