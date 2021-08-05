@@ -1,0 +1,69 @@
+﻿<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+    with font-awesome or any other icon font library -->
+        <li class="nav-item">
+            <a asp-action="Index" asp-controller="Dashboard" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                    Home
+                </p>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a asp-action="CreateStudent" asp-controller="Student" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Add Student
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="GetStudentDataView" asp-controller="Student" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Show Student
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="AllStudentsWithEditAndDeleteButton" asp-controller="Student" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Edit/Delete Student
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="CreateAttendance" asp-controller="Attendance" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Add Attendance
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="GetAttendanceDataView" asp-controller="Attendance" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Get Attendance Info
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="AllAttendanceWithEditAndDeleteButton" asp-controller="Attendance" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                    Edit/Delete Attendance
+                </p>
+            </a>
+        </li>
+
+    </ul>
+</nav>

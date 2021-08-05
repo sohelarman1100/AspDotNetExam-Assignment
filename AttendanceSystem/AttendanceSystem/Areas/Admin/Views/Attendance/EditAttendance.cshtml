@@ -1,0 +1,66 @@
+﻿@model EditAttendanceModel
+@{
+    ViewData["Title"] = "Edit Attendance";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Edit Attendance</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Edit Attendance</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Edit Attendance</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form class="form-horizontal" method="post" asp-controller="Attendance"
+                          asp-action="EditAttendance" asp-antiforgery="true">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <input type="hidden" asp-for="Id" />
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label asp-for="StudentId" class="col-sm-2 col-form-label">StudentId</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" asp-for="StudentId"
+                                           id="StudentId" placeholder="Student Id">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Date" class="col-sm-2 col-form-label">Date</label>
+                                <div class="col-sm-10">
+                                    <input type="datetime" asp-for="Date" class="form-control"
+                                           id="Date" placeholder="Date">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Edit</button>
+                            <a asp-action="AllAttendanceWithEditAndDeleteButton" asp-controller="Attendance"
+                               class="btn btn-default float-right">Cancel</a>
+                        </div>
+                        <!-- /.card-footer -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

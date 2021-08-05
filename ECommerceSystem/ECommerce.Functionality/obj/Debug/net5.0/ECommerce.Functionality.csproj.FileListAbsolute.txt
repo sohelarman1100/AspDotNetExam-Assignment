@@ -1,0 +1,15 @@
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ECommerce.Functionality.deps.json
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ECommerce.Functionality.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ref\ECommerce.Functionality.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ECommerce.Functionality.pdb
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.csproj.AssemblyReference.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.AssemblyInfoInputs.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.AssemblyInfo.cs
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.csproj.CoreCompileInputs.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ref\ECommerce.Functionality.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.pdb
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ECommerce.Data.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\bin\Debug\net5.0\ECommerce.Data.pdb
+G:\assignment-3\ECommerceSystem\ECommerce.Functionality\obj\Debug\net5.0\ECommerce.Functionality.csproj.CopyComplete

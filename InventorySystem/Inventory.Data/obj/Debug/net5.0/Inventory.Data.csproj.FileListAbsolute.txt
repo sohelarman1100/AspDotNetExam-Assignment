@@ -1,0 +1,12 @@
+G:\assignment-3\InventorySystem\Inventory.Data\bin\Debug\net5.0\Inventory.Data.deps.json
+G:\assignment-3\InventorySystem\Inventory.Data\bin\Debug\net5.0\Inventory.Data.dll
+G:\assignment-3\InventorySystem\Inventory.Data\bin\Debug\net5.0\ref\Inventory.Data.dll
+G:\assignment-3\InventorySystem\Inventory.Data\bin\Debug\net5.0\Inventory.Data.pdb
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.csproj.AssemblyReference.cache
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.AssemblyInfoInputs.cache
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.AssemblyInfo.cs
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.csproj.CoreCompileInputs.cache
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.dll
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\ref\Inventory.Data.dll
+G:\assignment-3\InventorySystem\Inventory.Data\obj\Debug\net5.0\Inventory.Data.pdb

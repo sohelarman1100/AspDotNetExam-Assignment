@@ -1,0 +1,15 @@
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\Attendence.Functionality.deps.json
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\Attendence.Functionality.dll
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\ref\Attendence.Functionality.dll
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\Attendence.Functionality.pdb
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\Attendence.Data.dll
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\bin\Debug\net5.0\Attendence.Data.pdb
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.csproj.AssemblyReference.cache
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.AssemblyInfoInputs.cache
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.AssemblyInfo.cs
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.csproj.CoreCompileInputs.cache
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.csproj.CopyComplete
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.dll
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\ref\Attendence.Functionality.dll
+G:\assignment-3\AttendanceSystem\Attendence.Functionality\obj\Debug\net5.0\Attendence.Functionality.pdb

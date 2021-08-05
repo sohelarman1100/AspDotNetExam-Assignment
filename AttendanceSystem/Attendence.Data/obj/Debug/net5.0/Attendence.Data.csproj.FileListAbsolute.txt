@@ -1,0 +1,12 @@
+G:\assignment-3\AttendanceSystem\Attendence.Data\bin\Debug\net5.0\Attendence.Data.deps.json
+G:\assignment-3\AttendanceSystem\Attendence.Data\bin\Debug\net5.0\Attendence.Data.dll
+G:\assignment-3\AttendanceSystem\Attendence.Data\bin\Debug\net5.0\ref\Attendence.Data.dll
+G:\assignment-3\AttendanceSystem\Attendence.Data\bin\Debug\net5.0\Attendence.Data.pdb
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.csproj.AssemblyReference.cache
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.AssemblyInfoInputs.cache
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.AssemblyInfo.cs
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.csproj.CoreCompileInputs.cache
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.dll
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\ref\Attendence.Data.dll
+G:\assignment-3\AttendanceSystem\Attendence.Data\obj\Debug\net5.0\Attendence.Data.pdb

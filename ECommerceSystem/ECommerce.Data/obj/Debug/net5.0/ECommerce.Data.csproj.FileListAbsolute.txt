@@ -1,0 +1,12 @@
+G:\assignment-3\ECommerceSystem\ECommerce.Data\bin\Debug\net5.0\ECommerce.Data.deps.json
+G:\assignment-3\ECommerceSystem\ECommerce.Data\bin\Debug\net5.0\ECommerce.Data.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Data\bin\Debug\net5.0\ref\ECommerce.Data.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Data\bin\Debug\net5.0\ECommerce.Data.pdb
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.csproj.AssemblyReference.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.AssemblyInfoInputs.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.AssemblyInfo.cs
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.csproj.CoreCompileInputs.cache
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ref\ECommerce.Data.dll
+G:\assignment-3\ECommerceSystem\ECommerce.Data\obj\Debug\net5.0\ECommerce.Data.pdb
