@@ -42,6 +42,7 @@ namespace Task1
                     para += (property.Name);
                     para += (".");
 
+                    //Console.WriteLine("property name= {0}", property.Name);
                     var nstdelement = property.PropertyType.GetProperties();
 
                     foreach (var nstdprp in nstdelement)

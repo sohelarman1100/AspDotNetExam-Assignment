@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public class Result:IData
+    public class Result : IData
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public double CGPA { get; set; }
         public Result()
         {
@@ -16,7 +16,7 @@ namespace Task1
         }
         public Result(int id, double cg)
         {
-            ID = id;
+            Id = id;
             CGPA = cg;
         }
     }

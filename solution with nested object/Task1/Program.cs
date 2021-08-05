@@ -11,21 +11,22 @@ namespace Task1
             constring.ConnectionString = "Server=DESKTOP-AG2EEU5\\SQLEXPRESS;Database=demo;User Id=aspnetb5;Password=123456;";
             var obj = new MyORM<IData>(constring);
 
-            var resObj = new Result(2, 3.5);
-            var infObj = new StudentInfo(2, "niloy", resObj);
-            var studObj = new Student(2, infObj);
-            obj.Insert(studObj);
+            var resObj = new Result(6, 3.5);
+            var infObj = new StudentInfo(6, "rakib", resObj);
+            var studObj = new Student(6, infObj);
+            //obj.Insert(studObj);
 
 
             resObj.CGPA = 3.17;
+            infObj.Name = "Arman";
             obj.Update(studObj);
 
-            obj.Delete(studObj.ID,studObj.GetType());
+            /*obj.Delete(studObj.ID,studObj.GetType());
             obj.Delete(studObj);
 
             var res = obj.GetById(studObj.ID,studObj.GetType());
             Console.WriteLine("column values of table [{0}] is:", res.GetType().Name);
-            printById(res);
+            printById(res);*/
         }
         public static void printById(object obj)
         {

@@ -8,7 +8,7 @@ namespace Task1
 {
     public class StudentInfo:IData
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public Result StdRes { get; set; }
         public StudentInfo()
@@ -17,7 +17,7 @@ namespace Task1
         }
         public StudentInfo(int id,string name, Result res)
         {
-            ID = id;
+            Id = id;
             Name = name;
             StdRes = res;
         }

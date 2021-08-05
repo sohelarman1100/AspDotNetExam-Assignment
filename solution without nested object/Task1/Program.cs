@@ -12,7 +12,7 @@ namespace Task1
             var obj = new MyORM<Student>(constring);
             
             var stud1 = new Student(6, "arman", 24);
-            obj.Insert(stud1);
+            /*obj.Insert(stud1);
 
             stud1.Name = "sohel arman"; //updated value for name of object ins;
             obj.Update(stud1);
@@ -21,7 +21,7 @@ namespace Task1
             obj.Delete(stud1);
 
             var res = obj.GetById(7);
-            Console.WriteLine("{0}, {1}, {2}", res.Id, res.Name, res.Age);
+            Console.WriteLine("{0}, {1}, {2}", res.Id, res.Name, res.Age);*/
 
             var rcrd = obj.GetAll();
             for (var i=0; i<rcrd.Count; i++)
