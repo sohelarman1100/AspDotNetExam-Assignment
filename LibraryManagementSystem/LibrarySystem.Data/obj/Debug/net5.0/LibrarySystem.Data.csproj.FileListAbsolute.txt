@@ -1,0 +1,12 @@
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\bin\Debug\net5.0\LibrarySystem.Data.deps.json
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\bin\Debug\net5.0\LibrarySystem.Data.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\bin\Debug\net5.0\ref\LibrarySystem.Data.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\bin\Debug\net5.0\LibrarySystem.Data.pdb
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.csproj.AssemblyReference.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.AssemblyInfoInputs.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.AssemblyInfo.cs
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.csproj.CoreCompileInputs.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\ref\LibrarySystem.Data.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Data\obj\Debug\net5.0\LibrarySystem.Data.pdb

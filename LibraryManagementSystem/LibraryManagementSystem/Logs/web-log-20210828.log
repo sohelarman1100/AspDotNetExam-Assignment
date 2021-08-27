@@ -1,0 +1,53 @@
+2021-08-28 00:19:17.275 +06:00 [INF] Application Starting up
+2021-08-28 01:02:43.823 +06:00 [INF] Application Starting up
+2021-08-28 01:03:53.180 +06:00 [ERR] Create book Failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> BookBO
+System.Object -> LibrarySystem.Functionality.BusinessObjects.BookBO
+   at lambda_method556(Closure , Object , BookBO , ResolutionContext )
+   at LibraryManagementSystem.Areas.Admin.Models.CreateBookModel.CreateBook() in G:\own project\LibraryManagementSystem\LibraryManagementSystem\Areas\Admin\Models\CreateBookModel.cs:line 38
+   at LibraryManagementSystem.Areas.Admin.Controllers.BookController.CreateBook(CreateBookModel model) in G:\own project\LibraryManagementSystem\LibraryManagementSystem\Areas\Admin\Controllers\BookController.cs:line 35
+2021-08-28 01:09:01.541 +06:00 [INF] Application Starting up
+2021-08-28 01:30:08.316 +06:00 [INF] Application Starting up
+2021-08-28 01:31:18.568 +06:00 [INF] Application Starting up
+2021-08-28 01:31:37.000 +06:00 [ERR] The view 'EditBook' was not found. Searched locations: ["/Areas/Admin/Views/Book/EditBook.cshtml","/Areas/Admin/Views/Shared/EditBook.cshtml","/Views/Shared/EditBook.cshtml","/Pages/Shared/EditBook.cshtml"]
+2021-08-28 01:31:37.149 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'EditBook' was not found. The following locations were searched:
+/Areas/Admin/Views/Book/EditBook.cshtml
+/Areas/Admin/Views/Shared/EditBook.cshtml
+/Views/Shared/EditBook.cshtml
+/Pages/Shared/EditBook.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-28 01:31:40.306 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-08-28 01:36:39.823 +06:00 [INF] Application Starting up
+2021-08-28 01:51:11.062 +06:00 [INF] Application Starting up
+2021-08-28 01:55:58.120 +06:00 [INF] Application Starting up
+2021-08-28 01:56:45.061 +06:00 [INF] Application Starting up

@@ -1,0 +1,15 @@
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.csproj.AssemblyReference.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.GeneratedMSBuildEditorConfig.editorconfig
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.AssemblyInfoInputs.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.AssemblyInfo.cs
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.csproj.CoreCompileInputs.cache
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\LibrarySystem.Functionality.deps.json
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\LibrarySystem.Functionality.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\ref\LibrarySystem.Functionality.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\LibrarySystem.Functionality.pdb
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\LibrarySystem.Data.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\bin\Debug\net5.0\LibrarySystem.Data.pdb
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.csproj.CopyComplete
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\ref\LibrarySystem.Functionality.dll
+G:\own project\LibraryManagementSystem\LibrarySystem.Functionality\obj\Debug\net5.0\LibrarySystem.Functionality.pdb
