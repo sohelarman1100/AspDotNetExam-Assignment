@@ -1,0 +1,80 @@
+2021-09-01 16:19:00.681 +06:00 [INF] Application Starting up
+2021-09-01 16:19:01.444 +06:00 [INF] Worker running at: "2021-09-01T16:19:01.4373331+06:00"
+2021-09-01 16:19:04.468 +06:00 [INF] Worker running at: "2021-09-01T16:19:04.4682136+06:00"
+2021-09-01 16:19:07.482 +06:00 [INF] Worker running at: "2021-09-01T16:19:07.4826385+06:00"
+2021-09-01 16:22:47.170 +06:00 [INF] Application Starting up
+2021-09-01 16:22:48.456 +06:00 [INF] Worker running at: "2021-09-01T16:22:48.4500691+06:00"
+2021-09-01 16:22:51.488 +06:00 [INF] Worker running at: "2021-09-01T16:22:51.4881942+06:00"
+2021-09-01 16:30:33.211 +06:00 [INF] Application Starting up
+2021-09-01 16:30:33.699 +06:00 [INF] Worker running at: "2021-09-01T16:30:33.6931180+06:00"
+2021-09-01 16:30:36.723 +06:00 [INF] Worker running at: "2021-09-01T16:30:36.7236121+06:00"
+2021-09-01 16:30:52.535 +06:00 [INF] Application Starting up
+2021-09-01 16:30:53.149 +06:00 [INF] Worker running at: "2021-09-01T16:30:53.1388688+06:00"
+2021-09-01 16:31:02.329 +06:00 [INF] Worker running at: "2021-09-01T16:31:02.3293197+06:00"
+2021-09-01 16:31:48.687 +06:00 [INF] Application Starting up
+2021-09-01 16:31:49.223 +06:00 [INF] Worker running at: "2021-09-01T16:31:49.2148321+06:00"
+2021-09-01 16:32:37.814 +06:00 [INF] Application Starting up
+2021-09-01 16:32:38.465 +06:00 [INF] Worker running at: "2021-09-01T16:32:38.4530249+06:00"
+2021-09-01 16:36:29.109 +06:00 [INF] Application Starting up
+2021-09-01 16:36:29.731 +06:00 [INF] Worker running at: "2021-09-01T16:36:29.7248043+06:00"
+2021-09-01 16:41:52.850 +06:00 [INF] Application Starting up
+2021-09-01 16:41:53.616 +06:00 [INF] Worker running at: "2021-09-01T16:41:53.6109099+06:00"
+2021-09-01 16:42:14.615 +06:00 [INF] Application Starting up
+2021-09-01 16:42:15.218 +06:00 [INF] Worker running at: "2021-09-01T16:42:15.2082720+06:00"
+2021-09-01 16:45:41.281 +06:00 [INF] Application Starting up
+2021-09-01 16:45:41.999 +06:00 [FTL] Application start-up failed
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Microsoft.Extensions.Hosting.IHostedService[] -> StockExchange.Worker -> StockExchange.Controls.ServiceControl -> StockExchange.Models.CreateStockPriceModel -> StockExchange.Functionality.Services.StockPriceService -> StockExchange.Functionality.UnitOfWorks.FunctionalityUnitOfWork.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'StockExchange.Functionality.UnitOfWorks.FunctionalityUnitOfWork' can be invoked with the available services and parameters:
+Cannot resolve parameter 'StockExchange.Functionality.Repositories.ICompanyRepository companies' of constructor 'Void .ctor(StockExchange.Functionality.Contexts.IFunctionalityContext, StockExchange.Functionality.Repositories.ICompanyRepository, StockExchange.Functionality.Repositories.IStockPriceRepository)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockExchange.Program.Main(String[] args) in G:\own project\StockExchange\StockExchange\Program.cs:line 42
+2021-09-01 17:42:33.491 +06:00 [INF] Application Starting up
+2021-09-01 17:42:36.104 +06:00 [INF] Worker running at: "2021-09-01T17:42:36.0711224+06:00"
+2021-09-01 17:42:36.546 +06:00 [FTL] Application start-up failed
+System.ArgumentNullException: Value cannot be null. (Parameter 'context')
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve[TService](IComponentContext context)
+   at StockExchange.Controls.ServiceControl..ctor() in G:\own project\StockExchange\StockExchange\Controls\ServiceControl.cs:line 18
+   at StockExchange.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\own project\StockExchange\StockExchange\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockExchange.Program.Main(String[] args) in G:\own project\StockExchange\StockExchange\Program.cs:line 42
+2021-09-01 22:11:23.580 +06:00 [INF] Application Starting up
+2021-09-01 22:11:27.692 +06:00 [INF] Worker running at: "2021-09-01T22:11:27.6880644+06:00"
