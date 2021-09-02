@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5j8wZ63q5/kPxhvB891zRLN0nvCSAaljWgAZQMF+M4TJm3F0dn9O68m8ZTlD5Hk4tFJcrNT1WtoQrMOOnH52EA==",
+  "dgSpecHash": "/q4PNthDlgYD0GYWVqtWdnKZERIIsV6q1dfUOzXAFVyMf5aVhk6Fu4QdfnFk72C0YXvkUpFKQz7/1+q7fUWmcg==",
   "success": true,
-  "projectFilePath": "G:\\own project\\StockData.Worker\\StockData.Worker\\StockData.Worker.csproj",
+  "projectFilePath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockData.Worker\\StockData.Worker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",

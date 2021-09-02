@@ -11087,11 +11087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\own project\\StockExchange\\StockExchange\\StockExchange.csproj",
-      "projectName": "StockExchange",
-      "projectPath": "G:\\own project\\StockExchange\\StockExchange\\StockExchange.csproj",
+      "projectUniqueName": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockData.Worker\\StockData.Worker.csproj",
+      "projectName": "StockData.Worker",
+      "projectPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockData.Worker\\StockData.Worker.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "G:\\own project\\StockExchange\\StockExchange\\obj\\publish\\win-x64\\",
+      "outputPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockData.Worker\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11108,8 +11108,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\own project\\StockExchange\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {
-              "projectPath": "G:\\own project\\StockExchange\\StockExchange.Functionality\\StockExchange.Functionality.csproj"
+            "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {
+              "projectPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj"
             }
           }
         }

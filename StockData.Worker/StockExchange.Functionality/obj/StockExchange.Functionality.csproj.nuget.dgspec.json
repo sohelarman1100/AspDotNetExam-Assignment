@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\own project\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {}
+    "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {}
   },
   "projects": {
-    "G:\\own project\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj": {
+    "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\own project\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj",
         "projectName": "StockExchange.Data",
-        "projectPath": "G:\\own project\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\own project\\StockData.Worker\\StockExchange.Data\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,6 +63,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -70,16 +84,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
       }
     },
-    "G:\\own project\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {
+    "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\own project\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj",
         "projectName": "StockExchange.Functionality",
-        "projectPath": "G:\\own project\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\StockExchange.Functionality.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\own project\\StockData.Worker\\StockExchange.Functionality\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Functionality\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +115,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\own project\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj": {
-                "projectPath": "G:\\own project\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj"
+              "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\StockData.Worker\\StockExchange.Data\\StockExchange.Data.csproj"
               }
             }
           }
@@ -131,12 +150,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
         }
       }
     }

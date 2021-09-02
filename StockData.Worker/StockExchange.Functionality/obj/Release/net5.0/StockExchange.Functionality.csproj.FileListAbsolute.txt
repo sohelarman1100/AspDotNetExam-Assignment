@@ -13,3 +13,18 @@ G:\own project\StockExchange\StockExchange.Functionality\obj\Release\net5.0\Stoc
 G:\own project\StockExchange\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.dll
 G:\own project\StockExchange\StockExchange.Functionality\obj\Release\net5.0\ref\StockExchange.Functionality.dll
 G:\own project\StockExchange\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.pdb
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\StockExchange.Functionality.deps.json
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\StockExchange.Functionality.dll
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\ref\StockExchange.Functionality.dll
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\StockExchange.Functionality.pdb
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\StockExchange.Data.dll
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\bin\Release\net5.0\StockExchange.Data.pdb
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.csproj.AssemblyReference.cache
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.GeneratedMSBuildEditorConfig.editorconfig
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.AssemblyInfoInputs.cache
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.AssemblyInfo.cs
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.csproj.CoreCompileInputs.cache
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.csproj.CopyComplete
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.dll
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\ref\StockExchange.Functionality.dll
+G:\AspDotNetExam-Assignment\StockData.Worker\StockExchange.Functionality\obj\Release\net5.0\StockExchange.Functionality.pdb
