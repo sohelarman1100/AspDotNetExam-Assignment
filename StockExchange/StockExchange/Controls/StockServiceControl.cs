@@ -25,39 +25,46 @@ namespace StockExchange.Controls
             var nodes = document.DocumentNode.SelectNodes("//div[contains(@class, 'table-responsive inner-scroll')]" +
                 "//table[contains(@class, 'table table-bordered background-white shares-table fixedHeader')]//td").ToList();
 
-            var lst = new List<string>();
+            var Status = nodes.Last().SelectSingleNode("//span/span").InnerText;
 
-            foreach (HtmlNode item in nodes)
-                lst.Add(Convert.ToString(item.InnerText));
-            //Console.WriteLine("len = {0}", lst.Count);
+            //Console.WriteLine("Status = {0}", Status);
 
-            for (int i = 0; i < lst.Count; i++)
-            {
+            if(Status == "Open")
+            { 
+                var lst = new List<string>();
 
-                if (i % 11 == 1)
+                foreach (HtmlNode item in nodes)
+                    lst.Add(Convert.ToString(item.InnerText));
+                //Console.WriteLine("len = {0}", lst.Count);
+
+                for (int i = 0; i < lst.Count; i++)
                 {
-                    string data = "";
-                    for (int j = 0; j < lst[i].Length; j++)
+
+                    if (i % 11 == 1)
                     {
-                        if ((lst[i][j] >= 'A' && lst[i][j] <= 'Z') || (lst[i][j] >= 48 && lst[i][j] <= 57))
-                            data = data + lst[i][j];
+                        string data = "";
+                        for (int j = 0; j < lst[i].Length; j++)
+                        {
+                            if ((lst[i][j] >= 'A' && lst[i][j] <= 'Z') || (lst[i][j] >= 48 && lst[i][j] <= 57))
+                                data = data + lst[i][j];
+                        }
+                        snglLst.Add(data);
                     }
-                    snglLst.Add(data);
-                }
 
-                else if (i % 11 != 0)
-                {
-                    snglLst.Add(lst[i]);
-                    if (i == 4179)
+                    else if (i % 11 != 0)
+                    {
+                        snglLst.Add(lst[i]);
+                        if (i == 4179)
+                            createObj();
+                    }
+
+                    else if (i != 0 && i % 11 == 0)
                         createObj();
                 }
 
-                else if (i != 0 && i % 11 == 0)
-                    createObj();
+                //for testing purpose
+                //createObj();
             }
-
-            //for testing purpose
-            //createObj();
         }
         public void createObj()
         {

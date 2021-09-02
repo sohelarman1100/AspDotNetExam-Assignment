@@ -2,7 +2,7 @@
 
 namespace StockExchange.Migrations
 {
-    public partial class AddStockAndCompany : Migration
+    public partial class AddCompanyAndStock : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

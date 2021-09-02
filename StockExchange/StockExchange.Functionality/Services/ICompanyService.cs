@@ -10,5 +10,6 @@ namespace StockExchange.Functionality.Services
     public interface ICompanyService
     {
         void CreateCompany(CompanyBO company);
+        public int NumOfCompany();
     }
 }

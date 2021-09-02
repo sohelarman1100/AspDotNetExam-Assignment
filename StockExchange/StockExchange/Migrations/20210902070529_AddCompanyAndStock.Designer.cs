@@ -9,8 +9,8 @@ using StockExchange.Functionality.Contexts;
 namespace StockExchange.Migrations
 {
     [DbContext(typeof(FunctionalityContext))]
-    [Migration("20210901182444_AddStockAndCompany")]
-    partial class AddStockAndCompany
+    [Migration("20210902070529_AddCompanyAndStock")]
+    partial class AddCompanyAndStock
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

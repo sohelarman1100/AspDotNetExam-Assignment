@@ -10,5 +10,6 @@ namespace StockExchange.Models
     {
         public string TradeCode { get; set; }
         public void CreateCompany();
+        public int NumOfCompany();
     }
 }

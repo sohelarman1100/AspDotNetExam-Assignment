@@ -31,9 +31,8 @@ namespace StockExchange
 
                 //Console.WriteLine("Printing from worker");
 
+                _companyService.SetVal();
                 _stockService.SetVal();
-
-                //_companyService.SetVal();
 
                 await Task.Delay(60*1000, stoppingToken);
             }

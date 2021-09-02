@@ -26,5 +26,10 @@ namespace StockExchange.Models
 
             _companyService.CreateCompany(company);
         }
+
+        public int NumOfCompany()
+        {
+            return _companyService.NumOfCompany();
+        }
     }
 }

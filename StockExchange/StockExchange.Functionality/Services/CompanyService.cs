@@ -28,5 +28,10 @@ namespace StockExchange.Functionality.Services
 
             _functionalityUnitOfWork.Save();
         }
+
+        public int NumOfCompany()
+        {
+            return _functionalityUnitOfWork.Companies.GetAll().Count;
+        }
     }
 }
