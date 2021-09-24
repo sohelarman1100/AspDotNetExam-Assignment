@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {}
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {}
   },
   "projects": {
-    "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
         "projectName": "DataImporter.Data",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

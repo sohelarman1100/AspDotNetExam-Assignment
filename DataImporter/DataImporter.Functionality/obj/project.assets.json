@@ -6246,11 +6246,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
+      "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
       "projectName": "DataImporter.Functionality",
-      "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
+      "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\obj\\",
+      "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6267,11 +6267,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
-              "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
+            "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+              "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
             },
-            "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
-              "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+            "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+              "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
             }
           }
         }

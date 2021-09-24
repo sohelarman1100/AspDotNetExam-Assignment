@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qniX41EY8Qqs16hd8pGyxQQc4zJJDucOhwWd+qJicM49ntiVmn9KEBNcj+KmWybW/gi0LpbeXdpOL55NnKg3jQ==",
+  "dgSpecHash": "w+ixxk+PFA4Dn+i3GMd1gHUvwQoOXqL7SV6r1nLiWHx5jVjUsQx5aJs3MrYTRnxlPeI9ni/W095CEZ7R/n6fig==",
   "success": true,
-  "projectFilePath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
+  "projectFilePath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
