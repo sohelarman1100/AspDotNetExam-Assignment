@@ -3,6 +3,7 @@ using DataImporter.Functionality.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -34,10 +35,33 @@ namespace DataImporter.Areas.DataControlArea.Models
 
         public void UploadFile(string userId)
         {
-           
+            //cleaning tempfiles under wwwroot, for confirming this folder is empty
+            string FilePath = _hostEnvironment.WebRootPath + "/tempfiles/";
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            DirectoryInfo d = new DirectoryInfo(FilePath);
+            FileInfo[] existingFile = d.GetFiles("*.xlsx");
+
+            foreach (FileInfo file in existingFile)
+            {
+                file.Delete();
+            }
+            //finish cleaning tempfiles
+
+            //cleaning confirmfiles under wwwroot, for confirming this folder is empty
+            FilePath = _hostEnvironment.WebRootPath + "/confirmfiles/";
+            d = new DirectoryInfo(FilePath);
+            existingFile = d.GetFiles("*.xlsx");
+
+            foreach (FileInfo file in existingFile)
+            {
+                file.Delete();
+            }
+            //finish cleaning confirmfiles
+
             string grpName = _groupService.GetGroupById(GroupId); 
 
-            //saving image to wwwroot/tempfiles
+            //saving image to wwwroot/tempfiles start
             string wwwRootPath = _hostEnvironment.WebRootPath;
             string fileName = Path.GetFileNameWithoutExtension(UploadedFile.FileName);
             string extension = Path.GetExtension(UploadedFile.FileName);
@@ -48,6 +72,7 @@ namespace DataImporter.Areas.DataControlArea.Models
             {
                 UploadedFile.CopyTo(fileStream);
             }
+            //saving image to wwwroot/tempfiles end
         }
     }
 }

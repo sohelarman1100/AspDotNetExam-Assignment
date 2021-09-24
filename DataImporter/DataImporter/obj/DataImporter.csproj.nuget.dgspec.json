@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\assignment-3\\DataImporter\\DataImporter\\DataImporter.csproj": {}
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter\\DataImporter.csproj": {}
   },
   "projects": {
-    "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
         "projectName": "DataImporter.Common",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Common\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
         "projectName": "DataImporter.Data",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,14 +140,14 @@
         }
       }
     },
-    "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
         "projectName": "DataImporter.Functionality",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,11 +164,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
               },
-              "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
               }
             }
           }
@@ -215,14 +215,14 @@
         }
       }
     },
-    "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
         "projectName": "DataImporter.Membership",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -239,8 +239,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
               }
             }
           }
@@ -299,14 +299,14 @@
         }
       }
     },
-    "G:\\assignment-3\\DataImporter\\DataImporter\\DataImporter.csproj": {
+    "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter\\DataImporter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter\\DataImporter.csproj",
+        "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter\\DataImporter.csproj",
         "projectName": "DataImporter",
-        "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter\\DataImporter.csproj",
+        "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter\\DataImporter.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter\\obj\\",
+        "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -323,14 +323,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
               },
-              "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj"
               },
-              "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
-                "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+              "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+                "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
               }
             }
           }

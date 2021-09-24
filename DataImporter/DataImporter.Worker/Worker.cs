@@ -32,7 +32,7 @@ namespace DataImporter.Worker
 
                 _importedFileProcessModel.ImportFileInfo();
 
-                await Task.Delay(2*60*1000, stoppingToken);
+                await Task.Delay(20*1000, stoppingToken);
             }
         }
     }

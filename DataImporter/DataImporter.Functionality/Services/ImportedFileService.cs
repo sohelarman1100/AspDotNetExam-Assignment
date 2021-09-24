@@ -52,6 +52,18 @@ namespace DataImporter.Functionality.Services
                 throw new InvalidOperationException("Couldn't find file");
         }
 
+        public void UpdateProcessingStatus(int fileId)
+        {
+            var fileEntity = _functionalityUnitOfWork.ImFiles.GetById(fileId);
+            if (fileEntity != null)
+            {
+                fileEntity.Status = "Processing...";
+                _functionalityUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Couldn't find file");
+        }
+
         public (IList<ImportedFileBO> records, int total, int totalDisplay) GetAllFiles(int pageIndex,
             int pageSize, string searchText, string sortText, Guid userId)
         {
@@ -70,6 +82,20 @@ namespace DataImporter.Functionality.Services
             _functionalityUnitOfWork.ImFiles.Remove(id);
 
             _functionalityUnitOfWork.Save();
+        }
+
+        public ImportedFileBO isFileExistOrNot(Guid userId, int groupId, string fileName)
+        {
+            var fileEntity = _functionalityUnitOfWork.ImFiles.Get(x => x.FileName == fileName &&
+                          x.UserId == userId && x.GroupId == groupId);
+
+            if (fileEntity.Count != 0)
+            {
+                var fileBO = _mapper.Map<ImportedFileBO>(fileEntity[0]);
+                return fileBO; 
+            }
+            else
+                return null;
         }
     }
 }

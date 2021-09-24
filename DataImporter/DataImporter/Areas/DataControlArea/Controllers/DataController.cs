@@ -141,6 +141,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         public IActionResult ExcelUploadConfirmation()
         {
             var model = new ExcelManageModel();
+            //model.GroupId = grpId;
             model.ShowFileData();
             return View(model);
         }
@@ -148,9 +149,12 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult ExcelUploadConfirmation(ExcelManageModel model)
         {
-            
+            //ViewBag.userId = _userManager.GetUserId(HttpContext.User);
             model.FileSaveToConfirmFolderAndDeleteFromTemporary();
-            return RedirectToAction(nameof(GetImportedFiles));
+            if (model.count == 1)
+                return View(model);
+            else
+                return RedirectToAction(nameof(GetImportedFiles));
         }
 
         public IActionResult ExcelDelete()

@@ -8684,11 +8684,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\assignment-3\\DataImporter\\DataImporter.Worker\\DataImporter.Worker.csproj",
+      "projectUniqueName": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Worker\\DataImporter.Worker.csproj",
       "projectName": "DataImporter.Worker",
-      "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Worker\\DataImporter.Worker.csproj",
+      "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Worker\\DataImporter.Worker.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "G:\\assignment-3\\DataImporter\\DataImporter.Worker\\obj\\",
+      "outputPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Worker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8705,11 +8705,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
-              "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
+            "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
+              "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
             },
-            "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
-              "projectPath": "G:\\assignment-3\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj"
+            "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj": {
+              "projectPath": "G:\\AspDotNetExam-Assignment\\DataImporter\\DataImporter.Functionality\\DataImporter.Functionality.csproj"
             }
           }
         }

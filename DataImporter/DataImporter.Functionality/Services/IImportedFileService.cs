@@ -15,5 +15,7 @@ namespace DataImporter.Functionality.Services
         (IList<ImportedFileBO> records, int total, int totalDisplay) GetAllFiles(int pageIndex, int pageSize, 
             string searchText, string sortText, Guid userId);
         void DeleteImportedFile(int id);
+        ImportedFileBO isFileExistOrNot(Guid userId, int groupId, string fileName);
+        void UpdateProcessingStatus(int fileId);
     }
 }

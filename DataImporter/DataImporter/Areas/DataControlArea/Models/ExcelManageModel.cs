@@ -1,4 +1,7 @@
 ﻿using Autofac;
+using DataImporter.Common.DateTimeUtilities;
+using DataImporter.Functionality.BusinessObjects;
+using DataImporter.Functionality.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using OfficeOpenXml;
@@ -12,15 +15,23 @@ namespace DataImporter.Areas.DataControlArea.Models
 {
     public class ExcelManageModel
     {
+        public int GroupId { get; set; }
+        public int count = 0;
         private readonly IWebHostEnvironment _hostEnvironment;
+        private IImportedFileService _importedFileService;
+        private IDateTimeUtility _dateTimeUtility;
         public List<List<string>> ExcelData = new List<List<string>>();
         public ExcelManageModel()
         {
             _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
+            _importedFileService = Startup.AutofacContainer.Resolve<IImportedFileService>();
+            _dateTimeUtility = Startup.AutofacContainer.Resolve<IDateTimeUtility>();
         }
-        public ExcelManageModel(IWebHostEnvironment hostEnvironment)
+        public ExcelManageModel(IImportedFileService importedFileService, IWebHostEnvironment hostEnvironment, IDateTimeUtility dateTimeUtility)
         {
             _hostEnvironment = hostEnvironment;
+            _importedFileService = importedFileService;
+            _dateTimeUtility = dateTimeUtility;
         }
 
         //following method is for reading data from excel file
@@ -58,6 +69,46 @@ namespace DataImporter.Areas.DataControlArea.Models
 
             foreach (FileInfo file in existingFile)
             {
+                string name = file.Name;
+                var data = name.Split('_');
+                var fileName = data[0];
+                var userId = Guid.Parse(data[1]);
+                var GrpName = data[2];
+                var GrpId = data[3].Split('.');
+                var groupId = int.Parse(GrpId[0]);
+                //var user = Guid.Parse(userId);
+                var importFileBO = _importedFileService.isFileExistOrNot(userId, groupId, fileName);
+
+                if(importFileBO != null && importFileBO.Status == "Successfully Uploaded")
+                {
+                    count = 1;
+                }
+                else
+                {
+                    count = 0;
+
+                    if(importFileBO != null && importFileBO.Status == "Pending...")
+                    {
+                        var confirmfile = Path.Combine(_hostEnvironment.WebRootPath, "confirmfiles", name);
+                        if (System.IO.File.Exists(confirmfile))
+                            System.IO.File.Delete(confirmfile);
+
+                        _importedFileService.DeleteImportedFile(importFileBO.Id);
+                    }
+                    //importing data to ImportedFiles table start
+                    var fileBO = new ImportedFileBO
+                    {
+                        FileName = fileName,
+                        UserId = userId,
+                        GroupId = int.Parse(GrpId[0]),
+                        GroupName = GrpName,
+                        Status = "Pending...",
+                        ImportDate = _dateTimeUtility.Now
+                    };
+                    _importedFileService.CreateImportedFile(fileBO);
+                    //importing data to ImportedFiles table end
+                }
+
                 //start Moving a file from one path to another path.....same system e copy o kora jay
                 string srcFile = file.Directory + "\\" + file.Name;
                 string destFile = Path.Combine(wwwRootPath + "/confirmfiles/", file.Name);

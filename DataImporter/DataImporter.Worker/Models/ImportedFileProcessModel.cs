@@ -27,10 +27,10 @@ namespace DataImporter.Worker.Models
 
         public void ImportFileInfo()
         {
+            //Console.WriteLine("check");
             List<List<string>> ExcelData = new List<List<string>>();
-            string FilePath = $"G:/assignment-3/DataImporter/DataImporter/wwwroot/confirmfiles";
+            string FilePath = $"G:/AspDotNetExam-Assignment/DataImporter/DataImporter/wwwroot/confirmfiles";
 
-            //ExcelPackage.LicenseContext = LicenseContext.Commercial;
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             DirectoryInfo d = new DirectoryInfo(FilePath);
             
@@ -42,7 +42,7 @@ namespace DataImporter.Worker.Models
                 {
                     string name = file.Name;
 
-                    //importing data to ImportedFiles table start
+                    //updating status to ImportedFiles table start
                     var data = name.Split('_');
                     var fileName = data[0];
                     var userId = Guid.Parse(data[1]);
@@ -57,8 +57,13 @@ namespace DataImporter.Worker.Models
                         Status = "Processing...",
                         ImportDate = _dateTimeUtility.Now
                     };
-                    _importedFileService.CreateImportedFile(importFileBO);
-                    //importing data to ImportedFiles table end
+
+                    //retriving file Id from database table
+                    int fileId = _importedFileService.GetFile(importFileBO);
+
+                    _importedFileService.UpdateProcessingStatus(fileId);
+
+                    //updating status to ImportedFiles table end
 
 
                     //importing data to AllData table start
@@ -82,9 +87,6 @@ namespace DataImporter.Worker.Models
                         }
                     }
 
-                    //retriving file Id from database table
-                    int fileId = _importedFileService.GetFile(importFileBO);
-
 
                     //calling below method for inserting data in AllData table
                     ImportDataInAllDataTable(ExcelData, fileId, userId, int.Parse(GrpId[0]), fileName);
@@ -98,7 +100,7 @@ namespace DataImporter.Worker.Models
                     if (System.IO.File.Exists(srcFile))
                         System.IO.File.Delete(srcFile);
 
-                    Console.WriteLine("file Id = {0}", fileId);
+                    //Console.WriteLine("file Id = {0}", fileId);
                 }
             }       
         }

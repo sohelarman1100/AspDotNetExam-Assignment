@@ -140,3 +140,5 @@ System.InvalidOperationException: The ViewData item that has the key 'Mylst' is 
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-24 23:42:13.880 +06:00 [INF] Application Starting up
+2021-09-24 23:43:32.720 +06:00 [INF] User logged in.
