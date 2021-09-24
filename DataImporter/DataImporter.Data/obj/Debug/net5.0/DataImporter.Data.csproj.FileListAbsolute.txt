@@ -1,0 +1,12 @@
+G:\assignment-3\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.deps.json
+G:\assignment-3\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.dll
+G:\assignment-3\DataImporter\DataImporter.Data\bin\Debug\net5.0\ref\DataImporter.Data.dll
+G:\assignment-3\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.pdb
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.csproj.AssemblyReference.cache
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.AssemblyInfoInputs.cache
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.AssemblyInfo.cs
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.csproj.CoreCompileInputs.cache
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.dll
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\ref\DataImporter.Data.dll
+G:\assignment-3\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.pdb
