@@ -14,14 +14,21 @@ namespace DataImporter.Areas.DataControlArea.Models
 {
     public class ExportFileModel
     {
-        private readonly IAllDataService _allDataService;
-        private readonly IWebHostEnvironment _hostEnvironment;
-        private readonly EmailSettings _emailSettings;
+        private IAllDataService _allDataService;
+        private IWebHostEnvironment _hostEnvironment;
+        private EmailSettings _emailSettings;
+        private ILifetimeScope _scope;
+
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _allDataService = _scope.Resolve<IAllDataService>();
+            _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
+        }
 
         public ExportFileModel()
         {
-            _allDataService = Startup.AutofacContainer.Resolve<IAllDataService>();
-            _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
+
         }
         public ExportFileModel(IAllDataService allDataService, IWebHostEnvironment hostEnvironment)
         {

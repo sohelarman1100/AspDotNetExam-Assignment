@@ -15,7 +15,7 @@ namespace DataImporter.Areas.DataControlArea.Models
 
         public GetGroupInfoModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+            //_groupService = Startup.AutofacContainer.Resolve<IGroupService>();
         }
         public GetGroupInfoModel(IGroupService groupService)
         {

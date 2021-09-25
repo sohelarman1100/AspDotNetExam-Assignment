@@ -20,13 +20,21 @@ namespace DataImporter.Areas.DataControlArea.Models
         
         [Required(ErrorMessage = "please select a file")]
         public IFormFile UploadedFile { get; set; }
-        private readonly IWebHostEnvironment _hostEnvironment;
-        private readonly IGroupService _groupService;
+        private IWebHostEnvironment _hostEnvironment;
+        private IGroupService _groupService;
+        private ILifetimeScope _scope;
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
+            _groupService = _scope.Resolve<IGroupService>();
+        }
+
         public FileUploadModel()
         {
-            _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+
         }
+
         public FileUploadModel(ILogger<FileUploadModel> logger, IWebHostEnvironment hostEnvironment , IGroupService groupService)
         {
             _hostEnvironment = hostEnvironment;

@@ -36,7 +36,7 @@ namespace DataImporter
         }
 
         public IConfiguration Configuration { get; }
-        public static ILifetimeScope AutofacContainer { get; set; }
+        public ILifetimeScope AutofacContainer { get; set; }
 
         public void ConfigureContainer(ContainerBuilder builder)
         {

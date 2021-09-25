@@ -11,12 +11,20 @@ namespace DataImporter.Areas.DataControlArea.Models
     public class GetImportedFilesModel
     {
         public Guid UserId { get; set; }
-        private readonly IImportedFileService _importedFileService;
+        private IImportedFileService _importedFileService;
+        private ILifetimeScope _scope;
+
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _importedFileService = _scope.Resolve<IImportedFileService>();
+        }
 
         public GetImportedFilesModel()
         {
-            _importedFileService = Startup.AutofacContainer.Resolve<IImportedFileService>();
+            
         }
+
         public GetImportedFilesModel(IImportedFileService importedFileService)
         {
             _importedFileService = importedFileService;

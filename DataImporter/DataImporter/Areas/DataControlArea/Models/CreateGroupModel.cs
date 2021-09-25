@@ -21,12 +21,19 @@ namespace DataImporter.Areas.DataControlArea.Models
         public Guid UserId { get; set; }
 
         private IGroupService _groupService;
-        private readonly IMapper _mapper;
+        private IMapper _mapper;
+        private ILifetimeScope _scope;
+
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
+            _mapper = _scope.Resolve<IMapper>();
+        }
 
         public CreateGroupModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
-            _mapper = Startup.AutofacContainer.Resolve<IMapper>();
+
         }
         public CreateGroupModel(IGroupService groupService)
         {

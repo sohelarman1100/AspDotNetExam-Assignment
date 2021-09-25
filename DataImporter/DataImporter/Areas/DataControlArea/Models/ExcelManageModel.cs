@@ -17,16 +17,25 @@ namespace DataImporter.Areas.DataControlArea.Models
     {
         public int GroupId { get; set; }
         public int count = 0;
-        private readonly IWebHostEnvironment _hostEnvironment;
+        private IWebHostEnvironment _hostEnvironment;
         private IImportedFileService _importedFileService;
         private IDateTimeUtility _dateTimeUtility;
+        private ILifetimeScope _scope;
+
         public List<List<string>> ExcelData = new List<List<string>>();
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
+            _importedFileService = _scope.Resolve<IImportedFileService>();
+            _dateTimeUtility = _scope.Resolve<IDateTimeUtility>();
+        }
+
         public ExcelManageModel()
         {
-            _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
-            _importedFileService = Startup.AutofacContainer.Resolve<IImportedFileService>();
-            _dateTimeUtility = Startup.AutofacContainer.Resolve<IDateTimeUtility>();
+
         }
+
         public ExcelManageModel(IImportedFileService importedFileService, IWebHostEnvironment hostEnvironment, IDateTimeUtility dateTimeUtility)
         {
             _hostEnvironment = hostEnvironment;

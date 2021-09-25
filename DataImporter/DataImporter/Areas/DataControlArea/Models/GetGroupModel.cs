@@ -12,11 +12,18 @@ namespace DataImporter.Areas.DataControlArea.Models
     public class GetGroupModel
     {
         public Guid UserId { get; set; }
-        private readonly IGroupService _groupService;
+        private IGroupService _groupService;
+        private ILifetimeScope _scope;
+
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
+        }
 
         public GetGroupModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+
         }
         public GetGroupModel(IGroupService groupService)
         {

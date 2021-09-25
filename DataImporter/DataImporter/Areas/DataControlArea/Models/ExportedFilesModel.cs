@@ -9,12 +9,20 @@ namespace DataImporter.Areas.DataControlArea.Models
 {
     public class ExportedFilesModel
     {
-        private readonly IExportedFileService _exportedFileService;
+        private IExportedFileService _exportedFileService;
+        private ILifetimeScope _scope;
+
+        public void ResolveDependency(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _exportedFileService = _scope.Resolve<IExportedFileService>();
+        }
 
         public ExportedFilesModel()
         {
-            _exportedFileService = Startup.AutofacContainer.Resolve<IExportedFileService>();
+
         }
+
         public ExportedFilesModel(IExportedFileService exportedFileService)
         {
             _exportedFileService = exportedFileService;
