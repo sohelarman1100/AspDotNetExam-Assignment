@@ -10,8 +10,10 @@
     <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
     <PackageReference Include="EPPlus" Version="5.7.4" />
     <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.8" />
@@ -30,6 +32,7 @@
     <Folder Include="Areas\DataControlArea\Data\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="wwwroot\confirmfiles\" />
+    <Folder Include="wwwroot\exportedFiles\" />
     <Folder Include="wwwroot\tempfiles\" />
   </ItemGroup>
 

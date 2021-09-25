@@ -152,9 +152,14 @@ namespace DataImporter.Areas.DataControlArea.Controllers
             //ViewBag.userId = _userManager.GetUserId(HttpContext.User);
             model.FileSaveToConfirmFolderAndDeleteFromTemporary();
             if (model.count == 1)
-                return View(model);
+                return RedirectToAction(nameof(FileExistingErrorMessage));
             else
                 return RedirectToAction(nameof(GetImportedFiles));
+        }
+
+        public IActionResult FileExistingErrorMessage()
+        {
+            return View();
         }
 
         public IActionResult ExcelDelete()
@@ -180,14 +185,17 @@ namespace DataImporter.Areas.DataControlArea.Controllers
             return Json(data);
         }
 
-        [HttpPost, ValidateAntiForgeryToken]
         public IActionResult ExportFile(int id)
         {
             var model = new ExportFileModel();
             model.ExportFile(id);
-            return RedirectToAction(nameof(GetExportedFiles));
+            return RedirectToAction(nameof(FileExportsuccessMessage));
         }
 
+        public IActionResult FileExportsuccessMessage()
+        {
+            return View();
+        }
 
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult DeleteImportedFile(int id)
