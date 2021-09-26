@@ -18,6 +18,7 @@ namespace DataImporter.Functionality.Profiles
         {
             CreateMap<Group, GroupBO>().ReverseMap();
             CreateMap<ImportedFiles, ImportedFileBO>().ReverseMap();
+            CreateMap<ExportedFiles, ExportedFileBO>().ReverseMap();
             CreateMap<AllData, AllDataBO>().ReverseMap();
         }
     }

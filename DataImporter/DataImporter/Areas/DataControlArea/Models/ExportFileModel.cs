@@ -73,16 +73,26 @@ namespace DataImporter.Areas.DataControlArea.Models
                 {
                     var worksheet = package.Workbook.Worksheets.Add("Sheet1");
                     int cnt = 1;
+
+                    var impFileBO = _importedFileService.GetFileById(id);
+
+                    var columnName = impFileBO.columnName.Split('>');
+                    if(columnName.Length > 0)
+                    {
+                        for (int j = 0; j < columnName.Length; j++)
+                            worksheet.Cells[1, j + 1].Value = columnName[j];
+                    }
+
                     for (int i = 0; i < allRecords.Count; i++)
                     {
                         string data = allRecords[0].KeyForColumnName;
-                        var columnName = data.Split('>');
+                        //var columnName = data.Split('>');
 
-                        if (i == 0)
-                        {
-                            for (int j = 0; j < columnName.Length; j++)
-                                worksheet.Cells[1, j + 1].Value = columnName[j];
-                        }
+                        //if (i == 0)
+                        //{
+                        //    for (int j = 0; j < columnName.Length; j++)
+                        //        worksheet.Cells[1, j + 1].Value = columnName[j];
+                        //}
 
                         data = allRecords[i].ValueForColumnValue;
                         var columnValue = data.Split('>');
@@ -104,13 +114,13 @@ namespace DataImporter.Areas.DataControlArea.Models
                 //sending the file to the user email
                 _emailService.SendEmail(receiverMail, "Exported Excel File", "please save your desire excel file", filePath);
 
-                //var exportFileBO = new ExportedFileBO
-                //{
-                //    FileName = allRecords[0].FileName,
-                //    importedFileId = id,
-                //    ExportDate = _dateTimeUtility.Now
-                //};
-                //_exportedFileService.StoreExportedFileInfo(exportFileBO);
+                var exportFileBO = new ExportedFileBO
+                {
+                    FileName = allRecords[0].FileName,
+                    importedFileId = id,
+                    ExportDate = _dateTimeUtility.Now
+                };
+                _exportedFileService.StoreExportedFileInfo(exportFileBO);
 
             }
 

@@ -1,4 +1,8 @@
-﻿using DataImporter.Functionality.UnitOfWorks;
+﻿using AutoMapper;
+using DataImporter.Functionality.BusinessObjects;
+using DataImporter.Functionality.Entities;
+using DataImporter.Functionality.Exceptions;
+using DataImporter.Functionality.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +14,11 @@ namespace DataImporter.Functionality.Services
     public class ExportedFileService : IExportedFileService
     {
         private IFunctionalityUnitOfWork _functionalityUnitOfWork;
-        public ExportedFileService(IFunctionalityUnitOfWork functionalityUnitOfWork)
+        private readonly IMapper _mapper;
+        public ExportedFileService(IFunctionalityUnitOfWork functionalityUnitOfWork, IMapper mapper)
         {
             _functionalityUnitOfWork = functionalityUnitOfWork;
+            _mapper = mapper;
         }
 
         public int SearchFile(int id)
@@ -21,9 +27,15 @@ namespace DataImporter.Functionality.Services
             return cnt;
         }
 
-        public void StoreExportedFileInfo(object exportFileBO)
+        public void StoreExportedFileInfo(ExportedFileBO exportFileBO)
         {
-            throw new NotImplementedException();
+            if (exportFileBO == null)
+                throw new InvalidParameterException("file info was not provided");
+
+            var exortedFileEntity = _mapper.Map<ExportedFiles>(exportFileBO);
+            _functionalityUnitOfWork.ExFiles.Add(exortedFileEntity);
+
+            _functionalityUnitOfWork.Save();
         }
     }
 }

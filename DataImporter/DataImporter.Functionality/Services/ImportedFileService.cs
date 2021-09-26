@@ -52,12 +52,13 @@ namespace DataImporter.Functionality.Services
                 throw new InvalidOperationException("Couldn't find file");
         }
 
-        public void UpdateProcessingStatus(int fileId)
+        public void UpdateProcessingStatus(int fileId, string colName)
         {
             var fileEntity = _functionalityUnitOfWork.ImFiles.GetById(fileId);
             if (fileEntity != null)
             {
                 fileEntity.Status = "Processing...";
+                fileEntity.columnName = colName;
                 _functionalityUnitOfWork.Save();
             }
             else
