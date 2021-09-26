@@ -203,7 +203,10 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         {
             //var model = new ExportFileModel();
             var model = _scope.Resolve<ExportFileModel>();
-            model.ExportFile(id);
+            
+            var userId = _userManager.GetUserId(HttpContext.User);
+            ApplicationUser user = _userManager.FindByIdAsync(userId).Result;
+            model.ExportFile(id, user.Email);
             return RedirectToAction(nameof(FileExportsuccessMessage));
         }
 

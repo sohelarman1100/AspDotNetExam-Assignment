@@ -17,5 +17,6 @@ namespace DataImporter.Functionality.Services
         void DeleteImportedFile(int id);
         ImportedFileBO isFileExistOrNot(Guid userId, int groupId, string fileName);
         void UpdateProcessingStatus(int fileId);
+        ImportedFileBO GetFileById(int id);
     }
 }

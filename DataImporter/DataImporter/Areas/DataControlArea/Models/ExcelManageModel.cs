@@ -36,7 +36,8 @@ namespace DataImporter.Areas.DataControlArea.Models
 
         }
 
-        public ExcelManageModel(IImportedFileService importedFileService, IWebHostEnvironment hostEnvironment, IDateTimeUtility dateTimeUtility)
+        public ExcelManageModel(IImportedFileService importedFileService, IWebHostEnvironment hostEnvironment,
+            IDateTimeUtility dateTimeUtility)
         {
             _hostEnvironment = hostEnvironment;
             _importedFileService = importedFileService;

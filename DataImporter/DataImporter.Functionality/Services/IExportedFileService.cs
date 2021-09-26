@@ -8,5 +8,7 @@ namespace DataImporter.Functionality.Services
 {
     public interface IExportedFileService
     {
+        int SearchFile(int id);
+        void StoreExportedFileInfo(object exportFileBO);
     }
 }

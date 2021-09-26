@@ -2,8 +2,6 @@
 using AutoMapper;
 using DataImporter.Functionality.BusinessObjects;
 using DataImporter.Functionality.Services;
-//using DataImporter.Membership.BusinessObjects;
-//using DataImporter.Membership.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -37,9 +35,10 @@ namespace DataImporter.Areas.DataControlArea.Models
 
         }
 
-        public EditGroupModel(IGroupService groupService)
+        public EditGroupModel(IGroupService groupService, IMapper mapper)
         {
             _groupService = groupService;
+            _mapper = mapper;
         }
         internal void EditGroup(int id)
         {

@@ -18,5 +18,6 @@ namespace DataImporter.Functionality.Entities
         public string Status { get; set; }
         public DateTime ImportDate { get; set; }
         public IList<AllData> Datas { get; set; }
+        public string columnName { get; set; }
     }
 }

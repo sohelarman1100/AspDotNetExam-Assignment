@@ -97,5 +97,14 @@ namespace DataImporter.Functionality.Services
             else
                 return null;
         }
+        
+        public ImportedFileBO GetFileById(int id)
+        {
+            var entityFile = _functionalityUnitOfWork.ImFiles.GetById(id);
+
+            var fileBO = _mapper.Map<ImportedFileBO>(entityFile);
+
+            return fileBO;
+        }
     }
 }

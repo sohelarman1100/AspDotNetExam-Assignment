@@ -30,16 +30,27 @@ namespace DataImporter.Common.Utilities
             _useSSL = _emailSettings.useSSL;
             _from = _emailSettings.from;
         }
-        public void SendEmail(string receiver, string subject, string body)
+        public void SendEmail(string receiver, string subject, string body, string filePath = null)
         {
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress(_from, _from));
             message.To.Add(new MailboxAddress(receiver, receiver));
             message.Subject = subject;
-            message.Body = new TextPart("html")
+
+            if(filePath==null)
             {
-                Text = body,
-            };
+                message.Body = new TextPart("html")
+                {
+                    Text = body,
+                };
+            }
+            else
+            {
+                var builder = new BodyBuilder();
+                builder.TextBody = body;
+                builder.Attachments.Add(filePath);
+                message.Body = builder.ToMessageBody();
+            }
 
             using var client = new SmtpClient();
             client.Timeout = 60000;

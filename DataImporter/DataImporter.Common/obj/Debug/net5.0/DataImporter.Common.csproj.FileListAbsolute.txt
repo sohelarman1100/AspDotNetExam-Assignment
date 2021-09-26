@@ -10,3 +10,15 @@ G:\assignment-3\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.C
 G:\assignment-3\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.dll
 G:\assignment-3\DataImporter\DataImporter.Common\obj\Debug\net5.0\ref\DataImporter.Common.dll
 G:\assignment-3\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.pdb
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\bin\Debug\net5.0\DataImporter.Common.deps.json
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\bin\Debug\net5.0\DataImporter.Common.dll
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\bin\Debug\net5.0\ref\DataImporter.Common.dll
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\bin\Debug\net5.0\DataImporter.Common.pdb
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.csproj.AssemblyReference.cache
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.AssemblyInfoInputs.cache
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.AssemblyInfo.cs
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.csproj.CoreCompileInputs.cache
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.dll
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\ref\DataImporter.Common.dll
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Common\obj\Debug\net5.0\DataImporter.Common.pdb

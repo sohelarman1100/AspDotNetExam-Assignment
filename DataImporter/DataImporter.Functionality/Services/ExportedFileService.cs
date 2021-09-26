@@ -9,10 +9,21 @@ namespace DataImporter.Functionality.Services
 {
     public class ExportedFileService : IExportedFileService
     {
-        private IFunctionalityUnitOfWork _membershipUnitOfWork;
-        public ExportedFileService(IFunctionalityUnitOfWork membershipUnitOfWork)
+        private IFunctionalityUnitOfWork _functionalityUnitOfWork;
+        public ExportedFileService(IFunctionalityUnitOfWork functionalityUnitOfWork)
         {
-            _membershipUnitOfWork = membershipUnitOfWork;
+            _functionalityUnitOfWork = functionalityUnitOfWork;
+        }
+
+        public int SearchFile(int id)
+        {
+            int cnt = _functionalityUnitOfWork.ExFiles.GetCount(x=> x.importedFileId == id);
+            return cnt;
+        }
+
+        public void StoreExportedFileInfo(object exportFileBO)
+        {
+            throw new NotImplementedException();
         }
     }
 }

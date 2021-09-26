@@ -35,9 +35,10 @@ namespace DataImporter.Areas.DataControlArea.Models
         {
 
         }
-        public CreateGroupModel(IGroupService groupService)
+        public CreateGroupModel(IGroupService groupService, IMapper mapper)
         {
             _groupService = groupService;
+            _mapper = mapper;
         }
         internal void CreateGroup()
         {

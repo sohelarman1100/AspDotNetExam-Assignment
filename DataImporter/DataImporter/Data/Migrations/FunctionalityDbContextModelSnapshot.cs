@@ -67,18 +67,10 @@ namespace DataImporter.Data.Migrations
                     b.Property<string>("FileName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GroupId")
+                    b.Property<int>("importedFileId")
                         .HasColumnType("int");
 
-                    b.Property<string>("GroupName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("GroupId");
 
                     b.ToTable("ExportedFiles");
                 });
@@ -205,17 +197,6 @@ namespace DataImporter.Data.Migrations
                     b.Navigation("File");
                 });
 
-            modelBuilder.Entity("DataImporter.Functionality.Entities.ExportedFiles", b =>
-                {
-                    b.HasOne("DataImporter.Functionality.Entities.Group", "Group")
-                        .WithMany("ExFiles")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Group");
-                });
-
             modelBuilder.Entity("DataImporter.Functionality.Entities.Group", b =>
                 {
                     b.HasOne("DataImporter.Membership.Entities.ApplicationUser", "User")
@@ -240,8 +221,6 @@ namespace DataImporter.Data.Migrations
 
             modelBuilder.Entity("DataImporter.Functionality.Entities.Group", b =>
                 {
-                    b.Navigation("ExFiles");
-
                     b.Navigation("Files");
                 });
 

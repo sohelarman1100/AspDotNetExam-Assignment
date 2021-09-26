@@ -15,6 +15,6 @@ namespace DataImporter.Functionality.Entities
         public Guid UserId { get; set; }
         public ApplicationUser User { get; set; }
         public IList<ImportedFiles> Files { get; set; }
-        public IList<ExportedFiles> ExFiles { get; set; }
+        //public IList<ExportedFiles> ExFiles { get; set; }
     }
 }
