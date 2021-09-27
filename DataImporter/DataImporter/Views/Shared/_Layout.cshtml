@@ -59,8 +59,15 @@
             </a>
 
             <!-- Sidebar -->
-            <div class="sidebar">        
-                <partial name="_MenuPartial" />
+            <div class="sidebar">
+                @if (ViewBag.userid == null)
+                {
+                    <p style="color:whitesmoke">please login to discover the menu</p>
+                }
+                else
+                {
+                    <partial name="_MenuPartial" />
+                }
             </div>
             <!-- /.sidebar -->
         </aside>

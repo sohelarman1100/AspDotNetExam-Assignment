@@ -206,7 +206,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
             
             var userId = _userManager.GetUserId(HttpContext.User);
             ApplicationUser user = _userManager.FindByIdAsync(userId).Result;
-            model.ExportFile(id, user.Email);
+            model.ExportFile(id, user.Email, Guid.Parse(userId));
             return RedirectToAction(nameof(FileExportsuccessMessage));
         }
 

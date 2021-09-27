@@ -11,9 +11,9 @@ namespace DataImporter.Functionality.BusinessObjects
         public int Id { get; set; }
         public string FileName { get; set; }
         public int importedFileId { get; set; }
-        //public Guid UserId { get; set; }
+        public Guid UserId { get; set; }
         //public int GroupId { get; set; }
-        //public string GroupName { get; set; }
+        public string GroupName { get; set; }
         public DateTime ExportDate { get; set; }
     }
 }

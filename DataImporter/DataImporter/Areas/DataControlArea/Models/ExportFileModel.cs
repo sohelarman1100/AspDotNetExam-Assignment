@@ -52,11 +52,15 @@ namespace DataImporter.Areas.DataControlArea.Models
             _exportedFileService = exportedFileService;
             _importedFileService = importedFileService;
         }
-        internal void ExportFile(int id , string receiverMail)
+        internal void ExportFile(int id , string receiverMail, Guid userId)
         {
+            //following database call is for checking file exist or not
             var IsFileExist = _exportedFileService.SearchFile(id);
-            var importedFile = _importedFileService.GetFileById(id);
 
+            //following database call is for retriving the group name of the file which user want to export
+            var impFileBO = _importedFileService.GetFileById(id);
+
+            //following database call is for retriving all data
             List<AllDataBO> allRecords = _allDataService.ExportFile(id);
 
             string wwwRootPath = _hostEnvironment.WebRootPath;
@@ -74,7 +78,7 @@ namespace DataImporter.Areas.DataControlArea.Models
                     var worksheet = package.Workbook.Worksheets.Add("Sheet1");
                     int cnt = 1;
 
-                    var impFileBO = _importedFileService.GetFileById(id);
+                    //var impFileBO = _importedFileService.GetFileById(id);
 
                     var columnName = impFileBO.columnName.Split('>');
                     if(columnName.Length > 0)
@@ -112,12 +116,17 @@ namespace DataImporter.Areas.DataControlArea.Models
                 }
 
                 //sending the file to the user email
-                _emailService.SendEmail(receiverMail, "Exported Excel File", "please save your desire excel file", filePath);
+                _emailService.SendEmail(receiverMail, "Exported Excel File", "please save your desired excel file", filePath);
+
+                //following operation is for retriving the group name of the file which user want to export
+
 
                 var exportFileBO = new ExportedFileBO
                 {
-                    FileName = allRecords[0].FileName,
+                    FileName = impFileBO.FileName,
                     importedFileId = id,
+                    UserId = impFileBO.UserId,
+                    GroupName = impFileBO.GroupName,
                     ExportDate = _dateTimeUtility.Now
                 };
                 _exportedFileService.StoreExportedFileInfo(exportFileBO);
