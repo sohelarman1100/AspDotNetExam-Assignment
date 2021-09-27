@@ -17,7 +17,7 @@ namespace DataImporter
             builder.RegisterType<CreateGroupModel>().AsSelf();
             builder.RegisterType<EditGroupModel>().AsSelf();
             builder.RegisterType<ExcelManageModel>().AsSelf();
-            builder.RegisterType<ExportedFilesModel>().AsSelf();
+            builder.RegisterType<GetExportedFilesModel>().AsSelf();
             builder.RegisterType<ExportFileModel>().AsSelf();
             builder.RegisterType<FileUploadModel>().AsSelf();
             builder.RegisterType<GetGroupModel>().AsSelf();

@@ -11,5 +11,7 @@ namespace DataImporter.Functionality.Services
     {
         int SearchFile(int id);
         void StoreExportedFileInfo(ExportedFileBO exportFileBO);
+        (IList<ExportedFileBO> records, int total, int totalDisplay) GetAllFiles(int pageIndex, int pageSize, 
+            string searchText, string sortText, Guid userId);
     }
 }

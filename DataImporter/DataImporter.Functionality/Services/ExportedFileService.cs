@@ -37,5 +37,18 @@ namespace DataImporter.Functionality.Services
 
             _functionalityUnitOfWork.Save();
         }
+
+        public (IList<ExportedFileBO> records, int total, int totalDisplay) GetAllFiles(int pageIndex, 
+            int pageSize, string searchText, string sortText, Guid userId)
+        {
+            var fileData = _functionalityUnitOfWork.ExFiles.GetDynamic(
+                string.IsNullOrWhiteSpace(searchText) ? x => x.UserId == userId : x => x.GroupName.Contains(searchText)
+                && x.UserId == userId, sortText, string.Empty, pageIndex, pageSize);
+
+            var resultData = (from file in fileData.data
+                              select _mapper.Map<ExportedFileBO>(file)).ToList();
+
+            return (resultData, fileData.total, fileData.totalDisplay);
+        }
     }
 }

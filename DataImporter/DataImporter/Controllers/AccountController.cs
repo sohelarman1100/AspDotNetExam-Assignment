@@ -105,10 +105,8 @@ namespace DataImporter.Controllers
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        //if (model.ReturnUrl == "/")
-                        //    return RedirectToAction("HomePage", "Data", new { area = "DataControlArea" });
-                        //else
-                            return LocalRedirect(model.ReturnUrl);
+                        
+                        return LocalRedirect(model.ReturnUrl);
                     }
                 }
                 foreach (var error in result.Errors)
@@ -158,10 +156,7 @@ namespace DataImporter.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    //if(returnUrl == "/")
-                    //    return RedirectToAction("HomePage", "Data", new { area = "DataControlArea" });
-                    //else
-                        return LocalRedirect(returnUrl);
+                    return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
                 {

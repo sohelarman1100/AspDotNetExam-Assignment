@@ -29,6 +29,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         }
         public IActionResult CreateGroups()
         {
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             var model = _scope.Resolve<CreateGroupModel>();
             return View(model);
         }
@@ -62,7 +63,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         public IActionResult Groups()  //group name,edit,dlt,import file
         {
             var model = _scope.Resolve<GetGroupModel>();
-
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View();
         }
         public JsonResult GetGroupData()
@@ -79,6 +80,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         public IActionResult EditGroup(int id)
         {
             var model = _scope.Resolve<EditGroupModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             model.EditGroup(id);
             return View(model);
         }
@@ -119,6 +121,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         {
             //var model = new FileUploadModel();
             var model = _scope.Resolve<FileUploadModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             model.GroupId = id;
             return View(model);
         }
@@ -152,6 +155,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         {
             //var model = new ExcelManageModel();
             var model = _scope.Resolve<ExcelManageModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             model.ShowFileData();
             return View(model);
         }
@@ -170,6 +174,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult FileExistingErrorMessage()
         {
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View();
         }
 
@@ -184,6 +189,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         {
             //var model = new GetImportedFilesModel();
             var model = _scope.Resolve<GetImportedFilesModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View(model);
         }
 
@@ -212,6 +218,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult FileExportsuccessMessage()
         {
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View();
         }
 
@@ -228,7 +235,25 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult GetExportedFiles()    //exports
         {
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View();
         }
+
+        public JsonResult GetExportedFileData()
+        {
+            var dataTablesModel = new DataTablesAjaxRequestModel(Request);
+            //var model = new GetImportedFilesModel();
+            var model = _scope.Resolve<GetExportedFilesModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
+
+            var data = model.GetAllFiles(dataTablesModel, Guid.Parse(ViewBag.userid));
+            return Json(data);
+        }
+
+        public IActionResult DownloadFile()
+        {
+            return RedirectToAction(nameof(GetExportedFiles));
+        }
+
     }
 }
