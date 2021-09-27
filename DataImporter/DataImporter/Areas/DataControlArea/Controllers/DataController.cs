@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -250,9 +251,18 @@ namespace DataImporter.Areas.DataControlArea.Controllers
             return Json(data);
         }
 
-        public IActionResult DownloadFile()
+        public IActionResult DownloadFile(int id)
         {
-            return RedirectToAction(nameof(GetExportedFiles));
+            var model = _scope.Resolve<DownloadFileModel>();
+            MemoryStream memory = model.DownloadFile(id);
+            var fileNameAfterDownload = id.ToString() + ".xlsx";
+            return File(memory, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileNameAfterDownload);
+        }
+
+        public IActionResult DownloadCompleteMessage()
+        {
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
+            return View();
         }
 
     }

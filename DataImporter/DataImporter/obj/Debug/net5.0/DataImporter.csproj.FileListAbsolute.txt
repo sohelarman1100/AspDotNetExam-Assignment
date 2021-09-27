@@ -972,3 +972,4 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter\bin\Debug\net5.0\DocumentF
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\bin\Debug\net5.0\ExcelNumberFormat.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\bin\Debug\net5.0\System.IO.Packaging.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\FileExportsuccessMessage.cshtml.g.cs
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\DownloadCompleteMessage.cshtml.g.cs
