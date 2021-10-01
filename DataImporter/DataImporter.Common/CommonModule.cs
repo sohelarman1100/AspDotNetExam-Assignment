@@ -14,12 +14,14 @@ namespace DataImporter.Common
     {
         protected override void Load(ContainerBuilder builder)
         {
-
+            
             builder.RegisterType<EmailService>().As<IEmailService>().InstancePerLifetimeScope();
 
             builder.RegisterType<FileDownload>().As<IFileDownload>().InstancePerLifetimeScope();
 
             builder.RegisterType<DateTimeUtility>().As<IDateTimeUtility>().InstancePerLifetimeScope();
+
+            builder.RegisterType<CopyExcelDataToList>().As<ICopyExcelDataToList>().InstancePerLifetimeScope();
 
             base.Load(builder);
         }

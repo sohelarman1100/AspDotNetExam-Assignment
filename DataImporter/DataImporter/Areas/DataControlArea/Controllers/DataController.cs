@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using DataImporter.Areas.DataControlArea.Models;
+using DataImporter.Common;
 using DataImporter.Membership.Entities;
 using DataImporter.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,12 +23,15 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<DataController> _logger;
         private readonly ILifetimeScope _scope;
+        private AllPaths _allPaths;
 
-        public DataController(ILifetimeScope scope, ILogger<DataController> logger, UserManager<ApplicationUser> userManager)
+        public DataController(ILifetimeScope scope, ILogger<DataController> logger, UserManager<ApplicationUser> userManager,
+            IOptions<AllPaths> allPaths)
         {
             _scope = scope;
             _logger = logger;
             _userManager = userManager;
+            _allPaths = allPaths.Value;
         }
         public IActionResult CreateGroups()
         {
@@ -137,15 +142,16 @@ namespace DataImporter.Areas.DataControlArea.Controllers
                 {
                     model.ResolveDependency(_scope);
                     ViewBag.userId = _userManager.GetUserId(HttpContext.User);
-                    model.UploadFile(ViewBag.userId);
+                    model.UploadFile(ViewBag.userId, _allPaths.tempFilesPath);
+                    model.CheckigColumnValidity(ViewBag.userId, _allPaths.tempFilesPath);
                     IsFileUploaded = true;
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "Failed to create Member");
-                    _logger.LogError(ex, "Create Member Failed");
+                    ModelState.AddModelError("", "Failed to create file");
+                    _logger.LogError(ex, "Create file Failed");
                 }
-                if (IsFileUploaded)
+                if (IsFileUploaded && model.columnMatchesOrNot == 0)
                     return RedirectToAction(nameof(ExcelUploadConfirmation));
             }
 
