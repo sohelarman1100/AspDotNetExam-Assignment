@@ -940,7 +940,6 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Are
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\EditGroup.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\ExcelUploadConfirmation.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\GetExportedFiles.cshtml.g.cs
-G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\GetGroupsFileData.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\GetImportedFiles.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\Groups.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\UploadContacts.cshtml.g.cs
@@ -973,3 +972,4 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter\bin\Debug\net5.0\ExcelNumb
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\bin\Debug\net5.0\System.IO.Packaging.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\FileExportsuccessMessage.cshtml.g.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\DownloadCompleteMessage.cshtml.g.cs
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter\obj\Debug\net5.0\Razor\Areas\DataControlArea\Views\Data\GetContactsData.cshtml.g.cs

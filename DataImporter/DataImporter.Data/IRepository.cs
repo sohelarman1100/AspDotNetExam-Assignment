@@ -38,5 +38,10 @@ namespace DataImporter.Data
         IList<TEntity> GetDynamic(Expression<Func<TEntity, bool>> filter = null,
             string orderBy = null,
             string includeProperties = "", bool isTrackingOff = false);
+
+        (IList<TEntity> data, int total, int totalDisplay) CustomGetDynamic(
+            Expression<Func<TEntity, bool>> filter = null,
+            string orderBy = null,
+            string includeProperties = "", int pageIndex = 1, int pageSize = 10, bool isTrackingOff = false);
     }
 }

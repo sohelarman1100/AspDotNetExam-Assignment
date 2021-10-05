@@ -19,5 +19,6 @@ namespace DataImporter.Functionality.Services
         void UpdateProcessingStatus(int fileId, string colName);
         ImportedFileBO GetFileById(int id);
         ImportedFileBO GetFileForMatchingGroupColumn(Guid userId, int groupId);
+        int NumOfFiles(Guid userId, int groupId);
     }
 }

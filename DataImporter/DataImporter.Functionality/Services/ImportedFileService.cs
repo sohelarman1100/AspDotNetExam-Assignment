@@ -68,7 +68,7 @@ namespace DataImporter.Functionality.Services
         public (IList<ImportedFileBO> records, int total, int totalDisplay) GetAllFiles(int pageIndex,
             int pageSize, string searchText, string sortText, Guid userId)
         {
-            var fileData = _functionalityUnitOfWork.ImFiles.GetDynamic(
+            var fileData = _functionalityUnitOfWork.ImFiles.CustomGetDynamic(
                 string.IsNullOrWhiteSpace(searchText) ? x => x.UserId == userId : x => x.GroupName.Contains(searchText)
                 && x.UserId == userId, sortText, string.Empty, pageIndex, pageSize);
 
@@ -113,13 +113,22 @@ namespace DataImporter.Functionality.Services
             var fileEntity = _functionalityUnitOfWork.ImFiles.GetFirstMatchingRecord(x => x.UserId == userId &&
                           x.GroupId == groupId);
 
+
             if (fileEntity != null)
             {
                 var fileBO = _mapper.Map<ImportedFileBO>(fileEntity);
                 return fileBO;
             }
             else
-                return null;
+                throw new InvalidOperationException("Couldn't find file");
+        }
+
+        public int NumOfFiles(Guid userId, int groupId)
+        {
+            int fileNum = _functionalityUnitOfWork.ImFiles.GetCount(x => x.UserId == userId &&
+                          x.GroupId == groupId);
+
+            return fileNum;
         }
     }
 }

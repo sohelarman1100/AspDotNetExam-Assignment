@@ -98,31 +98,8 @@ namespace DataImporter.Worker.Models
                     //updating status to ImportedFiles table end
 
 
-                    ////importing data to ExcelData list start
-                    //string srcFile = file.Directory + "\\" + name;
-                    //FileInfo exFile = new FileInfo(srcFile);
-
-                    //using (ExcelPackage package = new ExcelPackage(exFile))
-                    //{
-                    //    //get the first worksheet in the workbook
-                    //    ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-                    //    int colCount = worksheet.Dimension.End.Column;  //get Column Count
-                    //    int rowCount = worksheet.Dimension.End.Row;     //get row count
-                    //    for (int row = 1; row <= rowCount; row++)
-                    //    {
-                    //        List<string> lst = new List<string>();
-                    //        for (int col = 1; col <= colCount; col++)
-                    //        {
-                    //            lst.Add(worksheet.Cells[row, col].Value?.ToString().Trim());
-                    //        }
-                    //        ExcelData.Add(lst);
-                    //    }
-                    //}
-                    ////importing data to ExcelData list end
-
-
                     //calling below method for inserting data in AllData table
-                    ImportDataInAllDataTable(ExcelData, fileId, userId, int.Parse(GrpId[0]), fileName);
+                    ImportDataInAllDataTable(ExcelData, fileId, userId, int.Parse(GrpId[0]), GrpName, fileName);
 
 
                     //updating file status
@@ -138,8 +115,10 @@ namespace DataImporter.Worker.Models
             }       
         }
 
-        public void ImportDataInAllDataTable(List<List<string>> ExcelData, int fileId, Guid userId, int GrpId, string fileName)
+        public void ImportDataInAllDataTable(List<List<string>> ExcelData, int fileId, Guid userId,
+            int GrpId, string GrpName, string fileName)
         {
+
             List<AllDataBO> allDataBO = new List<AllDataBO>();
             var row = ExcelData.Count;
             var col = ExcelData[0].Count;
@@ -167,6 +146,7 @@ namespace DataImporter.Worker.Models
                 {
                     UserId = userId,
                     GroupId = GrpId,
+                    GroupName = GrpName.ToLower(),
                     FileId = fileId,
                     FileName = fileName,
                     FileImportDate = _dateTimeUtility.Now,

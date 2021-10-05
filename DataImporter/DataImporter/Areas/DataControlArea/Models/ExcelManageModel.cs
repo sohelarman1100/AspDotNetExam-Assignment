@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using DataImporter.Common.DateTimeUtilities;
+using DataImporter.Common.Methods;
 using DataImporter.Functionality.BusinessObjects;
 using DataImporter.Functionality.Services;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,7 @@ namespace DataImporter.Areas.DataControlArea.Models
         private IImportedFileService _importedFileService;
         private IDateTimeUtility _dateTimeUtility;
         private ILifetimeScope _scope;
+        private ICopyExcelDataToList _copyExcelDataToList;
 
         public List<List<string>> ExcelData = new List<List<string>>();
         public void ResolveDependency(ILifetimeScope scope)
@@ -29,6 +31,7 @@ namespace DataImporter.Areas.DataControlArea.Models
             _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
             _importedFileService = _scope.Resolve<IImportedFileService>();
             _dateTimeUtility = _scope.Resolve<IDateTimeUtility>();
+            _copyExcelDataToList = _scope.Resolve<ICopyExcelDataToList>();
         }
 
         public ExcelManageModel()
@@ -37,45 +40,48 @@ namespace DataImporter.Areas.DataControlArea.Models
         }
 
         public ExcelManageModel(IImportedFileService importedFileService, IWebHostEnvironment hostEnvironment,
-            IDateTimeUtility dateTimeUtility)
+            IDateTimeUtility dateTimeUtility, ICopyExcelDataToList copyExcelDataToList)
         {
             _hostEnvironment = hostEnvironment;
             _importedFileService = importedFileService;
             _dateTimeUtility = dateTimeUtility;
+            _copyExcelDataToList = copyExcelDataToList;
         }
 
         //following method is for reading data from excel file
-        public void ShowFileData()   
+        public void ShowFileData(string filePath)   
         {
-            FileInfo[] existingFile = GetFiles();
-            foreach(FileInfo file in existingFile)
-            {
-                string s = file.Directory + "\\" + file.Name;
-                FileInfo exFile = new FileInfo(s);
+            FileInfo[] existingFile = _copyExcelDataToList.GetFiles(filePath);
 
-                using (ExcelPackage package = new ExcelPackage(exFile))
-                {
-                    //get the first worksheet in the workbook
-                    ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-                    int colCount = worksheet.Dimension.End.Column;  //get Column Count
-                    int rowCount = worksheet.Dimension.End.Row;     //get row count
-                    for (int row = 1; row <= Math.Min(rowCount , 10); row++)
-                    {
-                        List<string> lst = new List<string>();
-                        for (int col = 1; col <= colCount; col++)
-                        {
-                            lst.Add(worksheet.Cells[row, col].Value?.ToString().Trim());
-                        }
-                        ExcelData.Add(lst);
-                    }
-                }
-            }
+            ExcelData = _copyExcelDataToList.CopyFileDataToList(existingFile);
+            //foreach (FileInfo file in existingFile)
+            //{
+            //    string s = file.Directory + "\\" + file.Name;
+            //    FileInfo exFile = new FileInfo(s);
+
+            //    using (ExcelPackage package = new ExcelPackage(exFile))
+            //    {
+            //        //get the first worksheet in the workbook
+            //        ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
+            //        int colCount = worksheet.Dimension.End.Column;  //get Column Count
+            //        int rowCount = worksheet.Dimension.End.Row;     //get row count
+            //        for (int row = 1; row <= Math.Min(rowCount , 10); row++)
+            //        {
+            //            List<string> lst = new List<string>();
+            //            for (int col = 1; col <= colCount; col++)
+            //            {
+            //                lst.Add(worksheet.Cells[row, col].Value?.ToString().Trim());
+            //            }
+            //            ExcelData.Add(lst);
+            //        }
+            //    }
+            //}
         }
 
-        internal void FileSaveToConfirmFolderAndDeleteFromTemporary()
+        internal void FileSaveToConfirmFolderAndDeleteFromTemporary(string tempFilePath, string confirmFilePath)
         {
-            FileInfo[] existingFile = GetFiles();
-            string wwwRootPath = _hostEnvironment.WebRootPath;
+            FileInfo[] existingFile = _copyExcelDataToList.GetFiles(tempFilePath);
+            //string wwwRootPath = _hostEnvironment.WebRootPath;
 
             foreach (FileInfo file in existingFile)
             {
@@ -93,7 +99,7 @@ namespace DataImporter.Areas.DataControlArea.Models
                 {
                     count = 1;
 
-                    var tmpfile = Path.Combine(_hostEnvironment.WebRootPath, "tempfiles", name);
+                    var tmpfile = Path.Combine(tempFilePath, name);
                     if (System.IO.File.Exists(tmpfile))
                         System.IO.File.Delete(tmpfile);
                 }
@@ -103,7 +109,7 @@ namespace DataImporter.Areas.DataControlArea.Models
 
                     if(importFileBO != null && importFileBO.Status == "Pending...")
                     {
-                        var confirmfile = Path.Combine(_hostEnvironment.WebRootPath, "confirmfiles", name);
+                        var confirmfile = Path.Combine(confirmFilePath, name);
                         if (System.IO.File.Exists(confirmfile))
                             System.IO.File.Delete(confirmfile);
 
@@ -124,7 +130,7 @@ namespace DataImporter.Areas.DataControlArea.Models
 
                     //start Moving a file from one path to another path.....same system e copy o kora jay
                     string srcFile = file.Directory + "\\" + file.Name;
-                    string destFile = Path.Combine(wwwRootPath + "/confirmfiles/", file.Name);
+                    string destFile = Path.Combine(confirmFilePath, file.Name);
                     File.Move(srcFile, destFile);
                     //end Moving a file from one path to another path
                 }
@@ -133,9 +139,9 @@ namespace DataImporter.Areas.DataControlArea.Models
             }
         }
 
-        internal void DeleteExcel()
+        internal void DeleteExcel(string filePath)
         {
-            FileInfo[] existingFile = GetFiles();
+            FileInfo[] existingFile = _copyExcelDataToList.GetFiles(filePath);
 
             foreach (FileInfo file in existingFile)
             {
@@ -145,15 +151,15 @@ namespace DataImporter.Areas.DataControlArea.Models
             }
         }
 
-        public FileInfo[] GetFiles()
-        {
-            string FilePath = _hostEnvironment.WebRootPath + "/tempfiles/";
+        //public FileInfo[] GetFiles()
+        //{
+        //    string FilePath = _hostEnvironment.WebRootPath + "/tempfiles/";
            
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;  //EPPlus library(nuget package) ti use korle ei license ti
-                                                                         //add kora lage.
-            DirectoryInfo d = new DirectoryInfo(FilePath);
-            FileInfo[] existingFile = d.GetFiles("*.xlsx");
-            return existingFile;
-        }
+        //    ExcelPackage.LicenseContext = LicenseContext.NonCommercial;  //EPPlus library(nuget package) ti use korle ei license ti
+        //                                                                 //add kora lage.
+        //    DirectoryInfo d = new DirectoryInfo(FilePath);
+        //    FileInfo[] existingFile = d.GetFiles("*.xlsx");
+        //    return existingFile;
+        //}
     }
 }

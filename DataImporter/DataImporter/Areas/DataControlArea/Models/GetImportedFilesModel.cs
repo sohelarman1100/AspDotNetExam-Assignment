@@ -36,7 +36,7 @@ namespace DataImporter.Areas.DataControlArea.Models
                 tableModel.PageIndex,
                 tableModel.PageSize,
                 tableModel.SearchText,
-                tableModel.GetSortText(new string[] { "FileName", "GroupName" }),
+                tableModel.GetSortText(new string[] { "Id", "FileName", "GroupName" }),
                 UserId);
 
             return new
@@ -46,6 +46,7 @@ namespace DataImporter.Areas.DataControlArea.Models
                 data = (from record in data.records
                         select new string[]
                         {
+                             record.Id.ToString(),
                              record.FileName,
                              record.GroupName,
                              record.Status,

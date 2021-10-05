@@ -23,7 +23,8 @@ namespace DataImporter
             builder.RegisterType<GetGroupModel>().AsSelf();
             builder.RegisterType<GetImportedFilesModel>().AsSelf();
             builder.RegisterType<DownloadFileModel>().AsSelf();
-
+            builder.RegisterType<GetContactsModel>().AsSelf();
+            
             base.Load(builder);
         }
     }

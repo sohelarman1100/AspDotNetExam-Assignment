@@ -12,6 +12,7 @@ namespace DataImporter.Functionality.Entities
         public int Id { get; set; }
         public Guid UserId { get; set; }
         public int GroupId { get; set; }
+        public string GroupName { get; set; }
         public int FileId { get; set; }
         public ImportedFiles File { get; set; }
         public string FileName { get; set; }

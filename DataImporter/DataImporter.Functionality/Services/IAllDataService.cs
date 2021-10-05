@@ -11,5 +11,6 @@ namespace DataImporter.Functionality.Services
     {
         void CreateAllData(List<AllDataBO> allDataBO);
         List<AllDataBO> ExportFile(int id);
+        IList<AllDataBO> GetAllData(Guid userId, string GroupName, DateTime dateFrom, DateTime dateTo);
     }
 }

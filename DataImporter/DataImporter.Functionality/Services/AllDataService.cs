@@ -43,5 +43,19 @@ namespace DataImporter.Functionality.Services
 
             return allRecordsBO;
         }
+
+        public IList<AllDataBO> GetAllData(Guid userId, string GroupName, DateTime dateFrom, DateTime dateTo)
+        {
+            GroupName = GroupName.ToLower();
+
+            var allData = _functionalityUnitOfWork.AllDatas.Get(dateFrom == DateTime.MinValue ? x => x.UserId == userId && 
+            x.GroupName == GroupName : x=> x.GroupName == GroupName && x.UserId == userId && x.FileImportDate>=dateFrom &&
+            x.FileImportDate<=dateTo);
+
+            var resultData = (from data in allData
+                              select _mapper.Map<AllDataBO>(data)).ToList();
+
+            return resultData;
+        }
     }
 }

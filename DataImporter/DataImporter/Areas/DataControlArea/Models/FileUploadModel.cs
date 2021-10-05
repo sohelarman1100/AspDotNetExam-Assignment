@@ -22,6 +22,7 @@ namespace DataImporter.Areas.DataControlArea.Models
     {
         public int GroupId { get; set; }
         public int columnMatchesOrNot = 0;
+        public int NoOfImportedFiles = 0;
         
         [Required(ErrorMessage = "please select a file")]
         public IFormFile UploadedFile { get; set; }
@@ -90,12 +91,15 @@ namespace DataImporter.Areas.DataControlArea.Models
             string extension = Path.GetExtension(UploadedFile.FileName);
             fileName = fileName + "_" + userId + "_" + grpName + "_" + GroupId + extension;
             //PhotoFileName = fileName;
-            string path = Path.Combine(wwwRootPath + "/tempfiles/", fileName);
+            string path = Path.Combine(filePath, fileName);
             using (var fileStream = new FileStream(path, FileMode.Create))
             {
                 UploadedFile.CopyTo(fileStream);
             }
             //saving image to wwwroot/tempfiles end
+
+            //checking any file exist or not under this group
+            NoOfImportedFiles = _importedFileService.NumOfFiles(Guid.Parse(userId), GroupId);
         }
 
         internal void CheckigColumnValidity(string userId, string filePath)
@@ -129,7 +133,7 @@ namespace DataImporter.Areas.DataControlArea.Models
 
         public void ClearFolder(string folderPath)
         {
-            string FilePath = _hostEnvironment.WebRootPath + "/tempfiles/";
+            string FilePath = folderPath;
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             DirectoryInfo d = new DirectoryInfo(FilePath);

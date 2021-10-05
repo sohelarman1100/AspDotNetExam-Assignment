@@ -103,7 +103,8 @@ namespace DataImporter.Models
 
                     var column = int.Parse(columnValue.Value.ToArray()[0]);
                     var direction = directionValue.Value.ToArray()[0];
-                    var sortDirection = $"{columnNames[column]} {(direction == "asc" ? "asc" : "desc")}";
+                    //var sortDirection = $"{columnNames[column]} {(direction == "asc" ? "asc" : "desc")}";
+                    var sortDirection = $"{columnNames[column]} {(direction == "asc" ? "desc" : "asc")}";
                     sortText.Append(sortDirection);
                 }
             }

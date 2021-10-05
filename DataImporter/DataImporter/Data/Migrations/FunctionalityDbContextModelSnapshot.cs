@@ -38,6 +38,9 @@ namespace DataImporter.Data.Migrations
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
 
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("KeyForColumnName")
                         .HasColumnType("nvarchar(max)");
 

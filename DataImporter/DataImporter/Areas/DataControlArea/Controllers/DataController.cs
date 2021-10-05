@@ -113,14 +113,35 @@ namespace DataImporter.Areas.DataControlArea.Controllers
             return RedirectToAction(nameof(Groups));
         }
 
-        public IActionResult GetGroupsFileData()
+        public IActionResult GetContactsData()
         {
-            //var model = new GetGroupInfoModel();
-            ////var model = _scope.Resolve<EditGroupModel>();
-            //var lst = model.GetGroups().ToList();
-            //SelectList Lst = new SelectList(lst, "Id", "GroupName");
-            //ViewBag.Mylst = lst;
-            return View();
+            var model = _scope.Resolve<GetContactsModel>();
+            ViewBag.userid = _userManager.GetUserId(HttpContext.User);
+            return View(model);
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult GetContactsData(GetContactsModel model)
+        {
+            ViewBag.userId = _userManager.GetUserId(HttpContext.User);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.ResolveDependency(_scope);
+                    model.GetAllContacts(ViewBag.userId);
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Failed to create group");
+                    _logger.LogError(ex, "Create Group Failed");
+                }
+                //model.ResolveDependency(_scope);
+                //model.GetAllContacts(ViewBag.userId);
+                //return View(model);
+            }
+           
+            return View(model);
         }
 
         public IActionResult UploadContacts(int id)
@@ -143,7 +164,8 @@ namespace DataImporter.Areas.DataControlArea.Controllers
                     model.ResolveDependency(_scope);
                     ViewBag.userId = _userManager.GetUserId(HttpContext.User);
                     model.UploadFile(ViewBag.userId, _allPaths.tempFilesPath);
-                    model.CheckigColumnValidity(ViewBag.userId, _allPaths.tempFilesPath);
+                    if(model.NoOfImportedFiles>0)
+                       model.CheckigColumnValidity(ViewBag.userId, _allPaths.tempFilesPath);
                     IsFileUploaded = true;
                 }
                 catch (Exception ex)
@@ -160,10 +182,9 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult ExcelUploadConfirmation()
         {
-            //var model = new ExcelManageModel();
             var model = _scope.Resolve<ExcelManageModel>();
             ViewBag.userid = _userManager.GetUserId(HttpContext.User);
-            model.ShowFileData();
+            model.ShowFileData(_allPaths.tempFilesPath);
             return View(model);
         }
 
@@ -172,7 +193,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         {
             //ViewBag.userId = _userManager.GetUserId(HttpContext.User);
             model.ResolveDependency(_scope);
-            model.FileSaveToConfirmFolderAndDeleteFromTemporary();
+            model.FileSaveToConfirmFolderAndDeleteFromTemporary(_allPaths.tempFilesPath, _allPaths.confirmFilesPath);
             if (model.count == 1)
                 return RedirectToAction(nameof(FileExistingErrorMessage));
             else
@@ -187,14 +208,12 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult ExcelDelete()
         {
-            //var model = new ExcelManageModel();
             var model = _scope.Resolve<ExcelManageModel>();
-            model.DeleteExcel();
+            model.DeleteExcel(_allPaths.tempFilesPath);
             return RedirectToAction(nameof(Groups));
         }
         public IActionResult GetImportedFiles()    //imports
         {
-            //var model = new GetImportedFilesModel();
             var model = _scope.Resolve<GetImportedFilesModel>();
             ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             return View(model);
@@ -203,7 +222,6 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         public JsonResult GetFileData()
         {
             var dataTablesModel = new DataTablesAjaxRequestModel(Request);
-            //var model = new GetImportedFilesModel();
             var model = _scope.Resolve<GetImportedFilesModel>();
             ViewBag.userid = _userManager.GetUserId(HttpContext.User);
             model.UserId = Guid.Parse(ViewBag.userid);
@@ -214,7 +232,6 @@ namespace DataImporter.Areas.DataControlArea.Controllers
 
         public IActionResult ExportFile(int id)
         {
-            //var model = new ExportFileModel();
             var model = _scope.Resolve<ExportFileModel>();
             
             var userId = _userManager.GetUserId(HttpContext.User);
@@ -232,7 +249,6 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult DeleteImportedFile(int id)
         {
-            //var model = new GetImportedFilesModel();
             var model = _scope.Resolve<GetImportedFilesModel>();
 
             model.DeleteImportedFile(id);
@@ -249,7 +265,7 @@ namespace DataImporter.Areas.DataControlArea.Controllers
         public JsonResult GetExportedFileData()
         {
             var dataTablesModel = new DataTablesAjaxRequestModel(Request);
-            //var model = new GetImportedFilesModel();
+           
             var model = _scope.Resolve<GetExportedFilesModel>();
             ViewBag.userid = _userManager.GetUserId(HttpContext.User);
 
