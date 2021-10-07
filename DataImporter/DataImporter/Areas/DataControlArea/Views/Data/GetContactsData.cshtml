@@ -6,10 +6,30 @@
 @section Styles
 {
     <link href="~/css/cstmStyleGetGroups.css" rel="stylesheet" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
-
+    @*<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
 }
+
+@section Scripts
+{
+    <script src="/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script>
+        $(function () {
+            $('#showdata').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true
+            });
+        });
+    </script>
+}
+
 
 <section class="content">
     <div class="row">
@@ -58,14 +78,14 @@
                         <h3 class="card-title">your required items are given below</h3>
                     </div>
                     <div>
-                        <table class="table table-bordered border-primary table">
+                        <table id="showdata" class="table table-bordered border-primary table">
                             <thead>
                                 <tr class="table-warning">
                                     @for (var j = 0; j < Model.colName.Count; j++)
                                     {
-                                        <td style="font-weight:500">
+                                        <th style="font-weight:500">
                                             @Model.colName[j]
-                                        </td>
+                                        </th>
                                     }
                                 </tr>
                             </thead>

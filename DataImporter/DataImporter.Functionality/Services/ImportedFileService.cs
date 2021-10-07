@@ -34,10 +34,10 @@ namespace DataImporter.Functionality.Services
 
         public int GetFile(ImportedFileBO importFileBO)
         {
-            var fileId = _functionalityUnitOfWork.ImFiles.Get(x => x.FileName == importFileBO.FileName &&
+            var fileId = _functionalityUnitOfWork.ImFiles.GetFirstMatchingRecord(x => x.FileName == importFileBO.FileName &&
                           x.UserId==importFileBO.UserId && x.GroupId==importFileBO.GroupId);
 
-            return fileId[0].Id;
+            return fileId.Id;
         }
 
         public void UpdateStatus(int fileId)

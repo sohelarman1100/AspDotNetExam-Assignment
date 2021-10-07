@@ -64,7 +64,51 @@ namespace DataImporter.Functionality.Tests
             );
         }
 
-        
+        [Test]
+        public void CreateGroup_GroupIsNotNull_LoadProperty()
+        {
+            //Arrange
+            GroupBO group = new GroupBO { Id =5, GroupName = "Courses", UserId = Guid.Parse("610ca15c-d93a-4f49-ff08-08d981200880") };
+            var entityGroup = new Group();
+
+            _mapperMock.Setup(x => x.Map<Group>(group)).Returns(entityGroup).Verifiable();
+            _groupRepositoryMock.Setup(x => x.Add(entityGroup)).Verifiable();
+
+            _functionalityUnitOfWork.Setup(x => x.Groups).Returns(_groupRepositoryMock.Object);
+            _functionalityUnitOfWork.Setup(x => x.Save()).Verifiable();
+
+            //Act
+            _groupService.CreateGroup(group);
+
+            //Assert
+            //_mapperMock.VerifyAll();
+            this.ShouldSatisfyAllConditions(
+                () => _functionalityUnitOfWork.VerifyAll(),
+                () => _groupRepositoryMock.VerifyAll(),
+                () => _mapperMock.VerifyAll()
+            );
+        }
+
+        [Test]
+        public void GetGroupById_GroupExist_ReturnEntity()
+        {
+            //Arrange
+            const int id = 5;
+            var groupEntity = new Group { Id = id, GroupName = "Courses", UserId = Guid.Parse("610ca15c-d93a-4f49-ff08-08d981200880") };
+            _groupRepositoryMock.Setup(x => x.GetById(id)).Returns(groupEntity).Verifiable();
+
+            _functionalityUnitOfWork.Setup(x => x.Groups).Returns(_groupRepositoryMock.Object).Verifiable();
+
+
+            //Act
+            _groupService.GetGroupById(id);
+
+            //Assert
+            this.ShouldSatisfyAllConditions(
+                () => _functionalityUnitOfWork.VerifyAll(),
+                () => _groupRepositoryMock.VerifyAll()
+            );
+        }
 
     }
 }

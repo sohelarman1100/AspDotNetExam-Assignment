@@ -24,7 +24,7 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfoInputs.cache
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfo.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CoreCompileInputs.cache
-G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CopyComplete
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\ref\DataImporter.Membership.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.pdb
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CopyComplete
