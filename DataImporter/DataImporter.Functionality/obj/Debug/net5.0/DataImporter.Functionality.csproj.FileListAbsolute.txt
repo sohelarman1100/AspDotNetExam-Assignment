@@ -28,7 +28,6 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\ne
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.AssemblyInfoInputs.cache
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.AssemblyInfo.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.csproj.CoreCompileInputs.cache
-G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.csproj.CopyComplete
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\ref\DataImporter.Functionality.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.pdb

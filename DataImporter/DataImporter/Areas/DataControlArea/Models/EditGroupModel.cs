@@ -40,19 +40,19 @@ namespace DataImporter.Areas.DataControlArea.Models
             _groupService = groupService;
             _mapper = mapper;
         }
-        internal void EditGroup(int id)
+        public void EditGroup(int id)
         {
             var data = _groupService.EditGroup(id);
             _mapper.Map(data,this);
         }
 
-        internal void UpdateGroup()
+        public void UpdateGroup()
         {
             var group = _mapper.Map<GroupBO>(this);
             _groupService.UpdateGroup(group);
         }
 
-        internal void DeleteGroup(int id)
+        public void DeleteGroup(int id)
         {
             _groupService.DeleteGroup(id);
         }

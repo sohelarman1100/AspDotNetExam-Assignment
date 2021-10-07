@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataImporter.Data", "DataIm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataImporter.Functionality", "DataImporter.Functionality\DataImporter.Functionality.csproj", "{8B36CD94-AA8A-40E0-869A-C830B071CABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataImporter.Worker", "DataImporter.Worker\DataImporter.Worker.csproj", "{1054CB73-F37E-4256-B1DB-496506F30FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataImporter.Worker", "DataImporter.Worker\DataImporter.Worker.csproj", "{1054CB73-F37E-4256-B1DB-496506F30FA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7EC53D7A-B5CB-498C-B056-7F8478302C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataImporter.Functionality.Tests", "Tests\DataImporter.Functionality.Tests\DataImporter.Functionality.Tests.csproj", "{0200771E-FF9C-460C-80A4-61BAD105CCAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataImporter.Tests", "Tests\DataImporter.Tests\DataImporter.Tests.csproj", "{399A8627-FC0A-4596-A0B1-980CE4ABD486}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +51,21 @@ Global
 		{1054CB73-F37E-4256-B1DB-496506F30FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1054CB73-F37E-4256-B1DB-496506F30FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1054CB73-F37E-4256-B1DB-496506F30FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0200771E-FF9C-460C-80A4-61BAD105CCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0200771E-FF9C-460C-80A4-61BAD105CCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0200771E-FF9C-460C-80A4-61BAD105CCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0200771E-FF9C-460C-80A4-61BAD105CCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{399A8627-FC0A-4596-A0B1-980CE4ABD486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399A8627-FC0A-4596-A0B1-980CE4ABD486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399A8627-FC0A-4596-A0B1-980CE4ABD486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399A8627-FC0A-4596-A0B1-980CE4ABD486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0200771E-FF9C-460C-80A4-61BAD105CCAA} = {7EC53D7A-B5CB-498C-B056-7F8478302C57}
+		{399A8627-FC0A-4596-A0B1-980CE4ABD486} = {7EC53D7A-B5CB-498C-B056-7F8478302C57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B8619E8-0037-4D14-AD21-15F43F1E8C78}
