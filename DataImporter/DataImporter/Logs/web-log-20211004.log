@@ -1,0 +1,40 @@
+2021-10-04 12:48:18.654 +06:00 [INF] Application Starting up
+2021-10-04 13:08:34.272 +06:00 [INF] Application Starting up
+2021-10-04 13:10:11.124 +06:00 [INF] User logged in.
+2021-10-04 16:09:41.446 +06:00 [INF] Application Starting up
+2021-10-04 16:17:27.710 +06:00 [INF] User logged in.
+2021-10-04 16:30:53.543 +06:00 [INF] Application Starting up
+2021-10-04 16:34:41.936 +06:00 [INF] Application Starting up
+2021-10-04 16:36:19.475 +06:00 [INF] Application Starting up
+2021-10-04 17:09:47.775 +06:00 [INF] Application Starting up
+2021-10-04 17:10:46.507 +06:00 [INF] User logged in.
+2021-10-04 17:34:07.246 +06:00 [INF] Application Starting up
+2021-10-04 17:49:33.886 +06:00 [INF] Application Starting up
+2021-10-04 18:28:55.176 +06:00 [INF] User logged in.
+2021-10-04 23:01:18.239 +06:00 [INF] Application Starting up
+2021-10-04 23:01:57.251 +06:00 [INF] User logged in.
+2021-10-04 23:06:50.997 +06:00 [INF] Application Starting up
+2021-10-04 23:10:26.600 +06:00 [INF] Application Starting up
+2021-10-04 23:11:50.044 +06:00 [INF] Application Starting up
+2021-10-04 23:16:31.372 +06:00 [ERR] Create Group Failed
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.DateTime.Parse(String s)
+   at DataImporter.Areas.DataControlArea.Models.GetContactsModel.GetAllContacts(String userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\GetContactsModel.cs:line 42
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.GetContactsData(GetContactsModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 132
+2021-10-04 23:17:52.306 +06:00 [INF] Application Starting up
+2021-10-04 23:18:29.923 +06:00 [ERR] Create Group Failed
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.DateTime.Parse(String s)
+   at DataImporter.Areas.DataControlArea.Models.GetContactsModel.GetAllContacts(String userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\GetContactsModel.cs:line 42
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.GetContactsData(GetContactsModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 132
+2021-10-04 23:29:57.568 +06:00 [INF] Application Starting up
+2021-10-04 23:31:02.185 +06:00 [ERR] Create Group Failed
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.DateTime.Parse(String s)
+   at DataImporter.Areas.DataControlArea.Models.GetContactsModel.GetAllContacts(String userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\GetContactsModel.cs:line 42
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.GetContactsData(GetContactsModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 132
+2021-10-04 23:54:35.339 +06:00 [INF] Application Starting up
+2021-10-04 23:55:01.368 +06:00 [INF] User logged in.

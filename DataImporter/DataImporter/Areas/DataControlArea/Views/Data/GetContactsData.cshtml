@@ -1,0 +1,92 @@
+﻿@model GetContactsModel
+@{
+    ViewData["Title"] = "GetContactsData";
+}
+
+@section Styles
+{
+    <link href="~/css/cstmStyleGetGroups.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
+
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="row cstmStyl">
+                    <div class="col-sm-2" style="font-weight:600; margin-left:3%">
+                        Group
+                    </div>
+                    <div class="col-sm-2 colMrgin" style="font-weight:600">
+                        Date From
+                    </div>
+                    <div class="col-sm-2 colMrgin" style="font-weight:600">
+                        Date To
+                    </div>
+                </div>
+
+                <form method="post" asp-controller="Data" asp-action="GetContactsData" asp-antiforgery="true">
+                    <div class="row cstmStyl">
+                        <div class="col-sm-2" style="margin-left: 3%; margin-bottom:1%">
+                            <input asp-for="GroupName" type="text" class="form-control" placeholder="group name">
+                        </div>
+                        <div class="col-sm-2 colMrgin">
+                            <input asp-for="dateFrom" type="datetime" class="form-control" placeholder="date from">
+                        </div>
+                        <div class="col-sm-2 colMrgin">
+                            <input asp-for="dateTo" type="datetime" class="form-control" placeholder="date to">
+                        </div>
+                        <div class="col-sm-2" style="margin-left:10%">
+                            <button type="submit" class="btn btn-outline-secondary" style="font-weight:600">Search</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">your required items are given below</h3>
+                    </div>
+                    <div>
+                        <table class="table table-bordered border-primary table">
+                            <thead>
+                                <tr class="table-warning">
+                                    @for (var j = 0; j < Model.colName.Count; j++)
+                                    {
+                                        <td style="font-weight:500">
+                                            @Model.colName[j]
+                                        </td>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (var i = 0; i < Model.ExcelData.Count; i++)
+                                {
+                                    <tr>
+                                        @for (var j = 0; j < Model.ExcelData[i].Count; j++)
+                                        {
+                                            <td>
+                                                @Model.ExcelData[i][j]
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

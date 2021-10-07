@@ -1,0 +1,72 @@
+2021-10-02 00:13:38.971 +06:00 [INF] Application Starting up
+2021-10-02 00:14:56.202 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-02 00:16:12.928 +06:00 [INF] Application Starting up
+2021-10-02 00:17:18.750 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-02 00:19:48.296 +06:00 [INF] Application Starting up
+2021-10-02 00:20:36.118 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-02 00:21:54.070 +06:00 [INF] Application Starting up
+2021-10-02 00:26:24.174 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-02 00:38:14.727 +06:00 [INF] Application Starting up
+2021-10-02 00:39:38.207 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-02 01:09:36.479 +06:00 [INF] Application Starting up
+2021-10-02 01:10:40.065 +06:00 [INF] User logged in.
+2021-10-02 01:25:13.793 +06:00 [INF] Application Starting up
+2021-10-02 01:29:17.407 +06:00 [INF] Application Starting up
+2021-10-02 19:46:35.736 +06:00 [INF] Application Starting up
+2021-10-02 20:01:27.796 +06:00 [INF] Application Starting up
+2021-10-02 20:02:27.574 +06:00 [INF] User logged in.

@@ -1,0 +1,122 @@
+2021-10-01 00:28:38.962 +06:00 [INF] Application Starting up
+2021-10-01 00:29:51.524 +06:00 [INF] User logged in.
+2021-10-01 01:07:16.382 +06:00 [INF] Application Starting up
+2021-10-01 01:15:32.392 +06:00 [INF] User logged in.
+2021-10-01 01:16:15.931 +06:00 [ERR] Create Member Failed
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'DataImporter.Functionality.Services.IImportedFileService.GetFileForMatchingGroupColumn(System.Guid, int)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , IImportedFileService , Object , Int32 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(Object userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 93
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 141
+2021-10-01 01:17:43.449 +06:00 [INF] Application Starting up
+2021-10-01 01:18:04.702 +06:00 [INF] Application Starting up
+2021-10-01 01:24:57.172 +06:00 [INF] Application Starting up
+2021-10-01 01:25:30.490 +06:00 [ERR] Create Member Failed
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: The best overloaded method match for 'DataImporter.Functionality.Services.IImportedFileService.GetFileForMatchingGroupColumn(System.Guid, int)' has some invalid arguments
+   at CallSite.Target(Closure , CallSite , IImportedFileService , Object , Int32 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(Object userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 93
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 141
+2021-10-01 01:31:28.539 +06:00 [INF] Application Starting up
+2021-10-01 01:32:55.620 +06:00 [INF] Application Starting up
+2021-10-01 01:41:27.097 +06:00 [INF] Application Starting up
+2021-10-01 01:45:02.892 +06:00 [INF] Application Starting up
+2021-10-01 01:45:30.875 +06:00 [INF] Application Starting up
+2021-10-01 02:21:54.321 +06:00 [INF] Application Starting up
+2021-10-01 02:24:58.400 +06:00 [INF] User logged in.
+2021-10-01 02:27:46.133 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Could not create an instance of type 'DataImporter.Areas.DataControlArea.Models.FileUploadModel'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Record types must have a single primary constructor. Alternatively, give the 'model' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-01 16:07:46.845 +06:00 [INF] Application Starting up
+2021-10-01 16:22:34.748 +06:00 [INF] Application Starting up
+2021-10-01 16:52:03.398 +06:00 [INF] User logged in.
+2021-10-01 16:52:48.250 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Could not create an instance of type 'DataImporter.Areas.DataControlArea.Models.FileUploadModel'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Record types must have a single primary constructor. Alternatively, give the 'model' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-01 18:28:41.492 +06:00 [INF] Application Starting up
+2021-10-01 18:29:37.102 +06:00 [INF] User logged in.
+2021-10-01 18:36:26.086 +06:00 [INF] Application Starting up
+2021-10-01 18:46:20.535 +06:00 [INF] Application Starting up
+2021-10-01 18:49:28.786 +06:00 [INF] Application Starting up
+2021-10-01 18:50:29.394 +06:00 [ERR] Create file Failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataImporter.Functionality.Services.GroupService.GetGroupById(Int32 grpId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\GroupService.cs:line 83
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.UploadFile(String userId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 83
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 145
+2021-10-01 18:50:52.548 +06:00 [INF] Application Starting up
+2021-10-01 18:52:41.538 +06:00 [INF] Application Starting up
+2021-10-01 18:54:10.735 +06:00 [INF] Application Starting up
+2021-10-01 18:54:16.813 +06:00 [INF] User logged out.
+2021-10-01 18:54:50.478 +06:00 [WRN] Invalid password for user.
+2021-10-01 18:54:50.479 +06:00 [WRN] User failed to provide the correct password.
+2021-10-01 18:55:00.840 +06:00 [INF] User logged in.
+2021-10-01 19:12:41.940 +06:00 [INF] Application Starting up
+2021-10-01 19:20:29.026 +06:00 [INF] Application Starting up
+2021-10-01 19:25:58.398 +06:00 [INF] Application Starting up
+2021-10-01 19:28:05.514 +06:00 [INF] Application Starting up
+2021-10-01 19:37:46.142 +06:00 [INF] Application Starting up
+2021-10-01 23:32:10.357 +06:00 [INF] Application Starting up
+2021-10-01 23:35:08.463 +06:00 [INF] User logged in.
+2021-10-01 23:47:52.282 +06:00 [INF] Application Starting up
+2021-10-01 23:48:12.927 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
+2021-10-01 23:50:28.130 +06:00 [INF] Application Starting up
+2021-10-01 23:51:39.433 +06:00 [ERR] Create file Failed
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at DataImporter.Data.Repository`2.GetFirstMatchingRecord(Expression`1 filter) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Data\Repository.cs:line 112
+   at DataImporter.Functionality.Services.ImportedFileService.GetFileForMatchingGroupColumn(Guid userId, Int32 groupId) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\Services\ImportedFileService.cs:line 113
+   at DataImporter.Areas.DataControlArea.Models.FileUploadModel.CheckigColumnValidity(String userId, String filePath) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Models\FileUploadModel.cs:line 103
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at DataImporter.Areas.DataControlArea.Controllers.DataController.UploadContacts(FileUploadModel model) in G:\AspDotNetExam-Assignment\DataImporter\DataImporter\Areas\DataControlArea\Controllers\DataController.cs:line 146
