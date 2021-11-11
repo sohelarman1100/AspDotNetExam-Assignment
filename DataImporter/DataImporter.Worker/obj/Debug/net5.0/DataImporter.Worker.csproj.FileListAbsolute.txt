@@ -163,7 +163,6 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\Da
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.AssemblyInfoInputs.cache
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.AssemblyInfo.cs
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.csproj.CoreCompileInputs.cache
-G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.csproj.CopyComplete
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\ref\DataImporter.Worker.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Worker\obj\Debug\net5.0\DataImporter.Worker.pdb

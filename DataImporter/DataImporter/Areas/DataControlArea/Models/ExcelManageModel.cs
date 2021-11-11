@@ -54,28 +54,7 @@ namespace DataImporter.Areas.DataControlArea.Models
             FileInfo[] existingFile = _copyExcelDataToList.GetFiles(filePath);
 
             ExcelData = _copyExcelDataToList.CopyFileDataToList(existingFile);
-            //foreach (FileInfo file in existingFile)
-            //{
-            //    string s = file.Directory + "\\" + file.Name;
-            //    FileInfo exFile = new FileInfo(s);
-
-            //    using (ExcelPackage package = new ExcelPackage(exFile))
-            //    {
-            //        //get the first worksheet in the workbook
-            //        ExcelWorksheet worksheet = package.Workbook.Worksheets.FirstOrDefault();
-            //        int colCount = worksheet.Dimension.End.Column;  //get Column Count
-            //        int rowCount = worksheet.Dimension.End.Row;     //get row count
-            //        for (int row = 1; row <= Math.Min(rowCount , 10); row++)
-            //        {
-            //            List<string> lst = new List<string>();
-            //            for (int col = 1; col <= colCount; col++)
-            //            {
-            //                lst.Add(worksheet.Cells[row, col].Value?.ToString().Trim());
-            //            }
-            //            ExcelData.Add(lst);
-            //        }
-            //    }
-            //}
+           
         }
 
         internal void FileSaveToConfirmFolderAndDeleteFromTemporary(string tempFilePath, string confirmFilePath)

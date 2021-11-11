@@ -31,3 +31,4 @@ G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\ne
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\ref\DataImporter.Functionality.dll
 G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.pdb
+G:\AspDotNetExam-Assignment\DataImporter\DataImporter.Functionality\obj\Debug\net5.0\DataImporter.Functionality.csproj.CopyComplete
