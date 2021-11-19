@@ -53,7 +53,7 @@ namespace DataImporter.Controllers
             var model = new RegisterModel();
             model.ReturnUrl = returnUrl;
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
+            //await _roleManager.CreateAsync(new Role("Admin"));
             return View(model);
         }
 
